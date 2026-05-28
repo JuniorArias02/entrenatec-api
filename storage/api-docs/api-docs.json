@@ -1,0 +1,807 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "EntrenaTech API",
+        "description": "Documentación de la API de EntrenaTech (CMS Educativo).",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "/api",
+            "description": "Servidor Principal API"
+        }
+    ],
+    "paths": {
+        "/auth/login": {
+            "post": {
+                "tags": [
+                    "Autenticación"
+                ],
+                "summary": "Iniciar sesión",
+                "operationId": "f1b1b78820123329e1c186330d7d1d04",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "correo",
+                                    "password"
+                                ],
+                                "properties": {
+                                    "correo": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "junior.arias02yt@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "qweasdzxc"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Genera el Token JWT",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Sesión iniciada con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "token": {
+                                                    "type": "string",
+                                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                                                },
+                                                "tipo_token": {
+                                                    "type": "string",
+                                                    "example": "bearer"
+                                                },
+                                                "expira_en": {
+                                                    "type": "integer",
+                                                    "example": 3600
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Credenciales inválidas",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Credenciales incorrectas."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/registro": {
+            "post": {
+                "tags": [
+                    "Autenticación"
+                ],
+                "summary": "Crear cuenta / Registrar usuario",
+                "operationId": "8d951602d4f04abc226efdb9dc8d9911",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nombre",
+                                    "correo",
+                                    "password",
+                                    "rol",
+                                    "estado"
+                                ],
+                                "properties": {
+                                    "nombre": {
+                                        "type": "string",
+                                        "example": "Junior Arias"
+                                    },
+                                    "correo": {
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "junior.arias02yt@gmail.com"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "qweasdzxc"
+                                    },
+                                    "rol": {
+                                        "type": "string",
+                                        "example": "DOCENTE",
+                                        "enum": [
+                                            "ADMIN",
+                                            "DOCENTE",
+                                            "EDITOR"
+                                        ]
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "ACTIVO",
+                                        "enum": [
+                                            "ACTIVO",
+                                            "INACTIVO"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Cuenta creada exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Usuario registrado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 2
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Junior Arias"
+                                                },
+                                                "correo": {
+                                                    "type": "string",
+                                                    "example": "junior.arias02yt@gmail.com"
+                                                },
+                                                "rol": {
+                                                    "type": "string",
+                                                    "example": "DOCENTE"
+                                                },
+                                                "estado": {
+                                                    "type": "string",
+                                                    "example": "ACTIVO"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/auth/refrescar": {
+            "post": {
+                "tags": [
+                    "Autenticación"
+                ],
+                "summary": "Refrescar el token JWT actual",
+                "operationId": "a201a34761c500e481ac3530bbbed1ee",
+                "responses": {
+                    "200": {
+                        "description": "Token refrescado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Token refrescado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "token": {
+                                                    "type": "string",
+                                                    "example": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+                                                },
+                                                "tipo_token": {
+                                                    "type": "string",
+                                                    "example": "bearer"
+                                                },
+                                                "expira_en": {
+                                                    "type": "integer",
+                                                    "example": 3600
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/grados": {
+            "get": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Obtener todos los grados",
+                "operationId": "f5529868db5026b01770539687c9ef8a",
+                "responses": {
+                    "200": {
+                        "description": "Lista de grados",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grados recuperados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "nombre": {
+                                                        "type": "string",
+                                                        "example": "Décimo"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Crear un grado",
+                "operationId": "00530b4fa4791df150c09ade942ce147",
+                "responses": {
+                    "201": {
+                        "description": "Grado creado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado creado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/materias": {
+            "get": {
+                "tags": [
+                    "Materias"
+                ],
+                "summary": "Obtener todas las materias",
+                "operationId": "dd190d573286daae410c46c7766c3fdd",
+                "responses": {
+                    "200": {
+                        "description": "Lista de materias",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materias recuperadas con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "nombre": {
+                                                        "type": "string",
+                                                        "example": "Matemáticas"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Materias"
+                ],
+                "summary": "Crear una materia",
+                "operationId": "f5d94fb5a8ead986c715bd1faf6b8c75",
+                "responses": {
+                    "201": {
+                        "description": "Materia creada",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materia creada con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/temas": {
+            "get": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Obtener todos los temas",
+                "operationId": "bc5cfca76c0f0e2c3d7849b222a64a86",
+                "responses": {
+                    "200": {
+                        "description": "Lista de todos los temas",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Temas recuperados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "titulo": {
+                                                        "type": "string",
+                                                        "example": "Introducción al Álgebra"
+                                                    },
+                                                    "slug": {
+                                                        "type": "string",
+                                                        "example": "introduccion-al-algebra"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Crear un nuevo tema",
+                "operationId": "a1d1298244a1bdddd80c2be9e16d794a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "titulo",
+                                    "slug",
+                                    "descripcion",
+                                    "grado_id",
+                                    "materia_id",
+                                    "periodo_id",
+                                    "creado_por",
+                                    "portada",
+                                    "orden",
+                                    "estado"
+                                ],
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string",
+                                        "example": "Introducción al Álgebra"
+                                    },
+                                    "slug": {
+                                        "type": "string",
+                                        "example": "introduccion-al-algebra"
+                                    },
+                                    "descripcion": {
+                                        "type": "string",
+                                        "example": "Un tema introductorio."
+                                    },
+                                    "grado_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "materia_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "periodo_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "creado_por": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "portada": {
+                                        "type": "string",
+                                        "example": "https://images.com/portada.jpg"
+                                    },
+                                    "orden": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "PUBLICADO"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Tema creado exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Tema creado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/temas/{id}": {
+            "get": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Obtener tema por ID",
+                "operationId": "14354866d72659c9a2257fba53c93104",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalle del tema",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Tema recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "titulo": {
+                                                    "type": "string",
+                                                    "example": "Introducción al Álgebra"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Actualizar tema existente",
+                "operationId": "c23022507d92db151e65bfa547d9ccde",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string",
+                                        "example": "Álgebra Avanzada"
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "PUBLICADO"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Tema actualizado exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Tema actualizado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Eliminar un tema",
+                "operationId": "bfac3b0c18a6fdf33a4e4c7b2abd6992",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tema eliminado exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Tema eliminado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "bearerAuth": {
+                "type": "http",
+                "name": "Authorization",
+                "in": "header",
+                "bearerFormat": "JWT",
+                "scheme": "bearer"
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Autenticación",
+            "description": "Autenticación"
+        },
+        {
+            "name": "Grados",
+            "description": "Grados"
+        },
+        {
+            "name": "Materias",
+            "description": "Materias"
+        },
+        {
+            "name": "Temas",
+            "description": "Temas"
+        }
+    ]
+}
