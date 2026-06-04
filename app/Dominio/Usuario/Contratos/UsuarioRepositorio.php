@@ -16,4 +16,12 @@ interface UsuarioRepositorio
      * Busca un usuario por su correo electrónico.
      */
     public function obtenerPorCorreo(string $correo): ?Usuario;
+
+    public function obtenerTodos();
+
+    public function obtenerPorId(int $id): ?Usuario;
+
+    public function actualizarPassword(int $id, string $nuevaPassword): Usuario;
+
+    public function actualizarRol(int $id, string $nuevoRol): Usuario;
 }

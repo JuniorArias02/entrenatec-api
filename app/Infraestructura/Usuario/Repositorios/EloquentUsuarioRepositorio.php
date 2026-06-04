@@ -24,4 +24,28 @@ class EloquentUsuarioRepositorio implements UsuarioRepositorio
     {
         return Usuario::where('correo', $correo)->first();
     }
+
+    public function obtenerTodos()
+    {
+        return Usuario::all();
+    }
+
+    public function obtenerPorId(int $id): ?Usuario
+    {
+        return Usuario::find($id);
+    }
+
+    public function actualizarPassword(int $id, string $nuevaPassword): Usuario
+    {
+        $usuario = Usuario::findOrFail($id);
+        $usuario->update(['password' => $nuevaPassword]);
+        return $usuario;
+    }
+
+    public function actualizarRol(int $id, string $nuevoRol): Usuario
+    {
+        $usuario = Usuario::findOrFail($id);
+        $usuario->update(['rol' => $nuevoRol]);
+        return $usuario;
+    }
 }

@@ -36,7 +36,18 @@ return new class extends Migration
             $table->timestamp('created_at')->nullable();
         });
 
-        // 4. temas
+        // 4. cuadros_teoricos
+        Schema::create('cuadros_teoricos', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('grado_id')->constrained('grados')->cascadeOnDelete();
+            $table->foreignId('materia_id')->constrained('materias')->cascadeOnDelete();
+            $table->foreignId('periodo_id')->constrained('periodos')->cascadeOnDelete();
+            $table->json('contenido');
+            $table->enum('estado', ['BORRADOR', 'PUBLICADO']);
+            $table->timestamps();
+        });
+
+        // 5. temas
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
             $table->string('titulo', 255);
@@ -53,14 +64,14 @@ return new class extends Migration
             $table->softDeletes(); // Requerido por Regla 16
         });
 
-        // 5. bloques_contenido
+        // 6. bloques_contenido
         Schema::create('bloques_contenido', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tema_id')->constrained('temas')->cascadeOnDelete();
             $table->enum('tipo', [
                 'TITULO', 'SUBTITULO', 'TEXTO', 'IMAGEN', 'GALERIA',
                 'VIDEO', 'PDF', 'LINK', 'TABLA', 'LISTA',
-                'CODIGO', 'CUADRO_TEORICO', 'ACTIVIDAD', 'SEPARADOR'
+                'CODIGO', 'ACTIVIDAD', 'QUIZ', 'MINIJUEGO', 'SEPARADOR'
             ]);
             $table->longText('contenido');
             $table->json('metadata')->nullable();
@@ -70,7 +81,7 @@ return new class extends Migration
             $table->softDeletes(); // Requerido por Regla 16
         });
 
-        // 6. archivos
+        // 7. archivos
         Schema::create('archivos', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 255);
@@ -83,27 +94,27 @@ return new class extends Migration
             $table->softDeletes(); // Requerido por Regla 16
         });
 
-        // 7. bloques_archivos
+        // 8. bloques_archivos
         Schema::create('bloques_archivos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('bloque_id')->constrained('bloques_contenido')->cascadeOnDelete();
             $table->foreignId('archivo_id')->constrained('archivos')->cascadeOnDelete();
         });
 
-        // 8. etiquetas
+        // 9. etiquetas
         Schema::create('etiquetas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre', 100);
         });
 
-        // 9. temas_etiquetas
+        // 10. temas_etiquetas
         Schema::create('temas_etiquetas', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tema_id')->constrained('temas')->cascadeOnDelete();
             $table->foreignId('etiqueta_id')->constrained('etiquetas')->cascadeOnDelete();
         });
 
-        // 10. comentarios
+        // 11. comentarios
         Schema::create('comentarios', function (Blueprint $table) {
             $table->id();
             $table->foreignId('tema_id')->constrained('temas')->cascadeOnDelete();
@@ -112,6 +123,51 @@ return new class extends Migration
             $table->enum('estado', ['PENDIENTE', 'APROBADO', 'OCULTO']);
             $table->timestamp('created_at')->nullable();
         });
+
+        // 12. quizzes
+        Schema::create('quizzes', function (Blueprint $table) {
+            $table->id();
+            $table->string('titulo', 255);
+            $table->text('descripcion');
+            $table->foreignId('tema_id')->constrained('temas')->cascadeOnDelete();
+            $table->integer('tiempo_limite');
+            $table->integer('puntaje_aprobacion');
+            $table->integer('intentos_maximos');
+            $table->enum('estado', ['BORRADOR', 'PUBLICADO']);
+            $table->timestamps();
+        });
+
+        // 13. quiz_preguntas
+        Schema::create('quiz_preguntas', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('quiz_id')->constrained('quizzes')->cascadeOnDelete();
+            $table->text('pregunta');
+            $table->enum('tipo', ['OPCION_MULTIPLE', 'VERDADERO_FALSO', 'SELECCION_UNICA', 'SELECCION_MULTIPLE']);
+            $table->integer('puntaje');
+            $table->integer('orden');
+            $table->timestamp('created_at')->nullable();
+        });
+
+        // 14. quiz_respuestas
+        Schema::create('quiz_respuestas', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('pregunta_id')->constrained('quiz_preguntas')->cascadeOnDelete();
+            $table->text('respuesta');
+            $table->boolean('es_correcta');
+            $table->timestamp('created_at')->nullable();
+        });
+
+        // 15. minijuegos
+        Schema::create('minijuegos', function (Blueprint $table) {
+            $table->id();
+            $table->string('titulo', 255);
+            $table->text('descripcion');
+            $table->foreignId('tema_id')->constrained('temas')->cascadeOnDelete();
+            $table->enum('tipo', ['MEMORIA', 'DRAG_DROP', 'RELACIONAR', 'CLICK', 'PUZZLE']);
+            $table->json('configuracion');
+            $table->enum('estado', ['BORRADOR', 'PUBLICADO']);
+            $table->timestamps();
+        });
     }
 
     /**
@@ -119,6 +175,10 @@ return new class extends Migration
      */
     public function down(): void
     {
+        Schema::dropIfExists('minijuegos');
+        Schema::dropIfExists('quiz_respuestas');
+        Schema::dropIfExists('quiz_preguntas');
+        Schema::dropIfExists('quizzes');
         Schema::dropIfExists('comentarios');
         Schema::dropIfExists('temas_etiquetas');
         Schema::dropIfExists('etiquetas');
@@ -126,6 +186,7 @@ return new class extends Migration
         Schema::dropIfExists('archivos');
         Schema::dropIfExists('bloques_contenido');
         Schema::dropIfExists('temas');
+        Schema::dropIfExists('cuadros_teoricos');
         Schema::dropIfExists('periodos');
         Schema::dropIfExists('materias');
         Schema::dropIfExists('grados');

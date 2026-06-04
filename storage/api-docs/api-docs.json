@@ -12,6 +12,75 @@
         }
     ],
     "paths": {
+        "/api/archivos": {
+            "post": {
+                "tags": [
+                    "Archivos"
+                ],
+                "summary": "Subir un archivo a la plataforma",
+                "operationId": "0cf8bc6ed83ec872d1c130e0077f9bf4",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "required": [
+                                    "archivo"
+                                ],
+                                "properties": {
+                                    "archivo": {
+                                        "description": "Archivo a subir (PDF, Imagen, Video, Doc, etc)",
+                                        "type": "string",
+                                        "format": "binary"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Archivo subido con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Archivo subido con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "archivo_id": {
+                                                    "type": "integer",
+                                                    "example": 45
+                                                },
+                                                "url": {
+                                                    "type": "string",
+                                                    "example": "/storage/archivos/file.pdf"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/auth/login": {
             "post": {
                 "tags": [
@@ -69,6 +138,10 @@
                                                 "expira_en": {
                                                     "type": "integer",
                                                     "example": 3600
+                                                },
+                                                "rol": {
+                                                    "type": "string",
+                                                    "example": "ADMIN"
                                                 }
                                             },
                                             "type": "object"
@@ -271,23 +344,144 @@
                 ]
             }
         },
-        "/grados": {
+        "/api/contenido-periodo": {
             "get": {
                 "tags": [
-                    "Grados"
+                    "Contenido Estudiante"
                 ],
-                "summary": "Obtener todos los grados",
-                "operationId": "f5529868db5026b01770539687c9ef8a",
+                "summary": "Obtiene el cuadro teórico y la lista de temas según grado y periodo",
+                "operationId": "9c8b7622f47be81dcbd5db6a1b79bd6d",
+                "parameters": [
+                    {
+                        "name": "grado_id",
+                        "in": "query",
+                        "description": "ID del grado seleccionado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "periodo_id",
+                        "in": "query",
+                        "description": "ID del periodo seleccionado",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
                 "responses": {
                     "200": {
-                        "description": "Lista de grados",
+                        "description": "Contenido recuperado exitosamente",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
                                         "mensaje": {
                                             "type": "string",
-                                            "example": "Grados recuperados con éxito."
+                                            "example": "Contenido recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "cuadro_teorico": {
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        },
+                                                        "grado_id": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        },
+                                                        "periodo_id": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        },
+                                                        "materia_id": {
+                                                            "type": "integer",
+                                                            "example": 1
+                                                        },
+                                                        "contenido": {
+                                                            "type": "object"
+                                                        },
+                                                        "estado": {
+                                                            "type": "string",
+                                                            "example": "PUBLICADO"
+                                                        }
+                                                    },
+                                                    "type": "object",
+                                                    "nullable": true
+                                                },
+                                                "temas": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "integer",
+                                                                "example": 1
+                                                            },
+                                                            "titulo": {
+                                                                "type": "string",
+                                                                "example": "Introducción a la Informática"
+                                                            },
+                                                            "slug": {
+                                                                "type": "string",
+                                                                "example": "introduccion-a-la-informatica"
+                                                            },
+                                                            "descripcion": {
+                                                                "type": "string",
+                                                                "example": "Breve descripción del tema..."
+                                                            },
+                                                            "portada": {
+                                                                "type": "string",
+                                                                "example": "https://ejemplo.com/portada.jpg"
+                                                            },
+                                                            "orden": {
+                                                                "type": "integer",
+                                                                "example": 1
+                                                            },
+                                                            "estado": {
+                                                                "type": "string",
+                                                                "example": "PUBLICADO"
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/cuadros-teoricos": {
+            "get": {
+                "tags": [
+                    "Cuadros Teóricos"
+                ],
+                "summary": "Obtener todos los cuadros teóricos",
+                "operationId": "424f48044f29a8539a574dba4a1b4908",
+                "responses": {
+                    "200": {
+                        "description": "Lista de cuadros teóricos recuperada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Cuadros teóricos recuperados con éxito."
                                         },
                                         "datos": {
                                             "type": "array",
@@ -297,9 +491,29 @@
                                                         "type": "integer",
                                                         "example": 1
                                                     },
-                                                    "nombre": {
+                                                    "grado_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "materia_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "periodo_id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "contenido": {
+                                                        "type": "object"
+                                                    },
+                                                    "estado": {
                                                         "type": "string",
-                                                        "example": "Décimo"
+                                                        "example": "PUBLICADO"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2026-05-27T22:28:47Z"
                                                     }
                                                 },
                                                 "type": "object"
@@ -319,22 +533,115 @@
             },
             "post": {
                 "tags": [
-                    "Grados"
+                    "Cuadros Teóricos"
                 ],
-                "summary": "Crear un grado",
-                "operationId": "00530b4fa4791df150c09ade942ce147",
+                "summary": "Crear un nuevo cuadro teórico",
+                "operationId": "1102f73e2f742acaac825e4fb3243ad4",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "grado_id",
+                                    "materia_id",
+                                    "periodo_id",
+                                    "contenido",
+                                    "estado"
+                                ],
+                                "properties": {
+                                    "grado_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "materia_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "periodo_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "contenido": {
+                                        "properties": {
+                                            "componente": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "Solución de problemas con tecnología"
+                                                }
+                                            },
+                                            "competencia": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "Reconozco y utilizo algoritmos"
+                                                }
+                                            },
+                                            "estandares": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "Diseño, construyo y pruebo algoritmos"
+                                                }
+                                            },
+                                            "aprendizaje": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "Identifico la estructura básica"
+                                                }
+                                            },
+                                            "evidencia": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string",
+                                                    "example": "Escribe algoritmos sencillos"
+                                                }
+                                            },
+                                            "intensidad_horaria": {
+                                                "type": "string",
+                                                "example": "4 horas semanales"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "PUBLICADO",
+                                        "enum": [
+                                            "BORRADOR",
+                                            "PUBLICADO"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "201": {
-                        "description": "Grado creado",
+                        "description": "Cuadro teórico creado con éxito",
                         "content": {
                             "application/json": {
                                 "schema": {
                                     "properties": {
                                         "mensaje": {
                                             "type": "string",
-                                            "example": "Grado creado con éxito."
+                                            "example": "Cuadro teórico creado con éxito."
                                         },
                                         "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "estado": {
+                                                    "type": "string",
+                                                    "example": "PUBLICADO"
+                                                }
+                                            },
                                             "type": "object"
                                         },
                                         "error": {
@@ -355,16 +662,639 @@
                 ]
             }
         },
-        "/materias": {
+        "/api/cuadros-teoricos/{id}": {
+            "get": {
+                "tags": [
+                    "Cuadros Teóricos"
+                ],
+                "summary": "Obtener un cuadro teórico por ID",
+                "operationId": "d2d0b818c65cad0c6ff45a590bf2bf63",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalle del cuadro teórico recuperado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Cuadro teórico recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "grado_id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "materia_id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "periodo_id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "contenido": {
+                                                    "type": "object"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Cuadro teórico no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Cuadro teórico no encontrado."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Cuadros Teóricos"
+                ],
+                "summary": "Actualizar un cuadro teórico existente",
+                "operationId": "9c90528d4e423d42ac56e81b3bac96ed",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "grado_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "BORRADOR",
+                                        "enum": [
+                                            "BORRADOR",
+                                            "PUBLICADO"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Cuadro teórico actualizado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Cuadro teórico actualizado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Cuadros Teóricos"
+                ],
+                "summary": "Eliminar un cuadro teórico",
+                "operationId": "ca437afc38a2ac3cbd933a7ac4bceb6f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Cuadro teórico eliminado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Cuadro teórico eliminado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/dashboard/estadisticas": {
+            "get": {
+                "tags": [
+                    "Dashboard"
+                ],
+                "summary": "Obtener estadísticas del dashboard",
+                "operationId": "94b7434941fe0d8d2e2438b97032cfbf",
+                "responses": {
+                    "200": {
+                        "description": "Estadísticas obtenidas con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Estadísticas recuperadas con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "temas_totales": {
+                                                    "type": "integer",
+                                                    "example": 120
+                                                },
+                                                "temas_publicados": {
+                                                    "type": "integer",
+                                                    "example": 95
+                                                },
+                                                "materias": {
+                                                    "type": "integer",
+                                                    "example": 15
+                                                },
+                                                "grados": {
+                                                    "type": "integer",
+                                                    "example": 6
+                                                },
+                                                "cuadros_teoricos": {
+                                                    "type": "integer",
+                                                    "example": 45
+                                                },
+                                                "usuarios_totales": {
+                                                    "description": "Solo disponible para ADMIN",
+                                                    "type": "integer",
+                                                    "example": 500
+                                                },
+                                                "estudiantes": {
+                                                    "description": "Solo disponible para ADMIN",
+                                                    "type": "integer",
+                                                    "example": 450
+                                                },
+                                                "docentes": {
+                                                    "description": "Solo disponible para ADMIN",
+                                                    "type": "integer",
+                                                    "example": 40
+                                                },
+                                                "administradores": {
+                                                    "description": "Solo disponible para ADMIN",
+                                                    "type": "integer",
+                                                    "example": 10
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/grados": {
+            "get": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Obtener todos los grados",
+                "operationId": "66dffb5066a7f35cd714cfea4fd9608b",
+                "responses": {
+                    "200": {
+                        "description": "Lista de grados recuperada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grados recuperados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "nombre": {
+                                                        "type": "string",
+                                                        "example": "Décimo"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2026-05-27T22:28:47Z"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Crear un nuevo grado",
+                "operationId": "d118aab2644aa63daaee4a1d22e17ad3",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nombre"
+                                ],
+                                "properties": {
+                                    "nombre": {
+                                        "type": "string",
+                                        "example": "Once"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Grado creado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado creado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 3
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Once"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/grados/{id}": {
+            "get": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Obtener un grado por ID",
+                "operationId": "0f5ee3a35c98be3d3eaf54aa9d8f3466",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalle del grado recuperado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Décimo"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Grado no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado no encontrado."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Actualizar un grado existente",
+                "operationId": "52466d7715f95b8f61475fc5148b8613",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nombre"
+                                ],
+                                "properties": {
+                                    "nombre": {
+                                        "type": "string",
+                                        "example": "Noveno"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Grado actualizado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado actualizado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Noveno"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Grados"
+                ],
+                "summary": "Eliminar un grado",
+                "operationId": "459efe8b2e09b8dd1f8a28d1fc98b967",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Grado eliminado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Grado eliminado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/materias": {
             "get": {
                 "tags": [
                     "Materias"
                 ],
                 "summary": "Obtener todas las materias",
-                "operationId": "dd190d573286daae410c46c7766c3fdd",
+                "operationId": "1c85f2aeacd2bce2e8b658d88abf4350",
                 "responses": {
                     "200": {
-                        "description": "Lista de materias",
+                        "description": "Lista de materias recuperada con éxito",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -383,7 +1313,20 @@
                                                     },
                                                     "nombre": {
                                                         "type": "string",
-                                                        "example": "Matemáticas"
+                                                        "example": "Informática"
+                                                    },
+                                                    "descripcion": {
+                                                        "type": "string",
+                                                        "example": "Materia de informática."
+                                                    },
+                                                    "estado": {
+                                                        "type": "string",
+                                                        "example": "ACTIVA"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2026-05-27T22:28:47Z"
                                                     }
                                                 },
                                                 "type": "object"
@@ -405,11 +1348,44 @@
                 "tags": [
                     "Materias"
                 ],
-                "summary": "Crear una materia",
-                "operationId": "f5d94fb5a8ead986c715bd1faf6b8c75",
+                "summary": "Crear una nueva materia",
+                "operationId": "4c3b6834307d3f0ee8e1feb0ae3bb4cc",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "nombre",
+                                    "descripcion",
+                                    "estado"
+                                ],
+                                "properties": {
+                                    "nombre": {
+                                        "type": "string",
+                                        "example": "Matemáticas"
+                                    },
+                                    "descripcion": {
+                                        "type": "string",
+                                        "example": "Materia de cálculo y álgebra."
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "ACTIVA",
+                                        "enum": [
+                                            "ACTIVA",
+                                            "INACTIVA"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
                 "responses": {
                     "201": {
-                        "description": "Materia creada",
+                        "description": "Materia creada con éxito",
                         "content": {
                             "application/json": {
                                 "schema": {
@@ -419,6 +1395,24 @@
                                             "example": "Materia creada con éxito."
                                         },
                                         "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 2
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Matemáticas"
+                                                },
+                                                "descripcion": {
+                                                    "type": "string",
+                                                    "example": "Materia de cálculo y álgebra."
+                                                },
+                                                "estado": {
+                                                    "type": "string",
+                                                    "example": "ACTIVA"
+                                                }
+                                            },
                                             "type": "object"
                                         },
                                         "error": {
@@ -430,6 +1424,930 @@
                                 }
                             }
                         }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/materias/{id}": {
+            "get": {
+                "tags": [
+                    "Materias"
+                ],
+                "summary": "Obtener una materia por ID",
+                "operationId": "127a87fd83e706a903bf916bb4e31f30",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalle de la materia recuperada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materia recuperada con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Informática"
+                                                },
+                                                "descripcion": {
+                                                    "type": "string",
+                                                    "example": "Materia de informática."
+                                                },
+                                                "estado": {
+                                                    "type": "string",
+                                                    "example": "ACTIVA"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Materia no encontrada",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materia no encontrada."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Materias"
+                ],
+                "summary": "Actualizar una materia existente",
+                "operationId": "66a47baad3b83a05df60a4faf2012d27",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "nombre": {
+                                        "type": "string",
+                                        "example": "Física"
+                                    },
+                                    "descripcion": {
+                                        "type": "string",
+                                        "example": "Física general."
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "ACTIVA",
+                                        "enum": [
+                                            "ACTIVA",
+                                            "INACTIVA"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Materia actualizada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materia actualizada con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "nombre": {
+                                                    "type": "string",
+                                                    "example": "Física"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Materias"
+                ],
+                "summary": "Eliminar una materia",
+                "operationId": "f5de5c87272874d2745cc1b5c51fa899",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Materia eliminada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Materia eliminada con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/periodos": {
+            "get": {
+                "tags": [
+                    "Periodos"
+                ],
+                "summary": "Obtener todos los periodos",
+                "operationId": "dc7bcd610dc99c73462d32227990f9a6",
+                "responses": {
+                    "200": {
+                        "description": "Lista de periodos recuperada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodos recuperados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "numero": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "fecha_inicio": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "2026-01-19"
+                                                    },
+                                                    "fecha_fin": {
+                                                        "type": "string",
+                                                        "format": "date",
+                                                        "example": "2026-03-27"
+                                                    },
+                                                    "created_at": {
+                                                        "type": "string",
+                                                        "format": "date-time",
+                                                        "example": "2026-05-27T22:28:47Z"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Periodos"
+                ],
+                "summary": "Crear un nuevo periodo",
+                "operationId": "01a803314c888a3f6aa29804dce12cfa",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "numero",
+                                    "fecha_inicio",
+                                    "fecha_fin"
+                                ],
+                                "properties": {
+                                    "numero": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "fecha_inicio": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2026-01-19"
+                                    },
+                                    "fecha_fin": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2026-03-27"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Periodo creado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodo creado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "numero": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "fecha_inicio": {
+                                                    "type": "string",
+                                                    "format": "date",
+                                                    "example": "2026-01-19"
+                                                },
+                                                "fecha_fin": {
+                                                    "type": "string",
+                                                    "format": "date",
+                                                    "example": "2026-03-27"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/periodos/{id}": {
+            "get": {
+                "tags": [
+                    "Periodos"
+                ],
+                "summary": "Obtener un periodo por ID",
+                "operationId": "f8d09e27cc301112b6f9086636767757",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Detalle del periodo recuperado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodo recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "numero": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "fecha_inicio": {
+                                                    "type": "string",
+                                                    "format": "date",
+                                                    "example": "2026-01-19"
+                                                },
+                                                "fecha_fin": {
+                                                    "type": "string",
+                                                    "format": "date",
+                                                    "example": "2026-03-27"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Periodo no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodo no encontrado."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": true
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Periodos"
+                ],
+                "summary": "Actualizar un periodo existente",
+                "operationId": "600f9b488ba0d8167afea4348e46b068",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "numero": {
+                                        "type": "integer",
+                                        "example": 2
+                                    },
+                                    "fecha_inicio": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2026-04-06"
+                                    },
+                                    "fecha_fin": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "example": "2026-06-12"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Periodo actualizado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodo actualizado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "numero": {
+                                                    "type": "integer",
+                                                    "example": 2
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Periodos"
+                ],
+                "summary": "Eliminar un periodo",
+                "operationId": "0a59dca2695f7d2b0fe9ec6b17d76972",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Periodo eliminado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Periodo eliminado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/progreso/temas": {
+            "post": {
+                "tags": [
+                    "Progreso Estudiante"
+                ],
+                "summary": "Marcar un tema como completado por un estudiante anónimo",
+                "operationId": "cfa43bbc66166db9498c7af6f2d550e1",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "estudiante_uuid",
+                                    "tema_id"
+                                ],
+                                "properties": {
+                                    "estudiante_uuid": {
+                                        "description": "UUID único guardado en el navegador del estudiante",
+                                        "type": "string",
+                                        "example": "123e4567-e89b-12d3-a456-426614174000"
+                                    },
+                                    "tema_id": {
+                                        "type": "integer",
+                                        "example": 1
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Tema marcado como completado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Tema marcado como completado."
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/progreso/estudiante/{uuid}": {
+            "get": {
+                "tags": [
+                    "Progreso Estudiante"
+                ],
+                "summary": "Obtener los IDs de los temas completados por el estudiante anónimo",
+                "operationId": "e20e036c82ef8b6ab35714154035141f",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Lista de IDs de temas completados",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Progreso recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "integer",
+                                                "example": 1
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/progreso/estudiante/{uuid}/dashboard": {
+            "get": {
+                "tags": [
+                    "Progreso Estudiante"
+                ],
+                "summary": "Obtener métricas para el dashboard del estudiante anónimo",
+                "operationId": "e1feb98fe0bf38be5ab2484bde1926fa",
+                "parameters": [
+                    {
+                        "name": "uuid",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Métricas del dashboard recuperadas con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Dashboard recuperado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "progreso_general": {
+                                                    "type": "integer",
+                                                    "example": 45
+                                                },
+                                                "temas_completados": {
+                                                    "type": "integer",
+                                                    "example": 5
+                                                },
+                                                "temas_totales": {
+                                                    "type": "integer",
+                                                    "example": 12
+                                                },
+                                                "nivel": {
+                                                    "type": "integer",
+                                                    "example": 2
+                                                },
+                                                "horas_estudio": {
+                                                    "type": "integer",
+                                                    "example": 10
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/quizzes": {
+            "get": {
+                "tags": [
+                    "Quizzes"
+                ],
+                "summary": "Obtener lista de quizzes filtrados",
+                "operationId": "c9533873e99d47806dd9b49b76c34040",
+                "parameters": [
+                    {
+                        "name": "tema_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "grado_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "periodo_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Quizzes obtenidos con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Quizzes"
+                ],
+                "summary": "Crear un nuevo quiz con sus preguntas y respuestas",
+                "operationId": "505707823a0f21c1f60a9ac93f80d06c",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "titulo",
+                                    "descripcion",
+                                    "tiempo_limite",
+                                    "puntaje_aprobacion",
+                                    "intentos_maximos",
+                                    "estado",
+                                    "preguntas"
+                                ],
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string",
+                                        "example": "Quiz de Historia"
+                                    },
+                                    "descripcion": {
+                                        "type": "string",
+                                        "example": "Evaluación final"
+                                    },
+                                    "tema_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "grado_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "periodo_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "tiempo_limite": {
+                                        "type": "integer",
+                                        "example": 30
+                                    },
+                                    "puntaje_aprobacion": {
+                                        "type": "integer",
+                                        "example": 70
+                                    },
+                                    "intentos_maximos": {
+                                        "type": "integer",
+                                        "example": 3
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "PUBLICADO"
+                                    },
+                                    "preguntas": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "pregunta": {
+                                                    "type": "string",
+                                                    "example": "¿Quién descubrió América?"
+                                                },
+                                                "tipo": {
+                                                    "type": "string",
+                                                    "example": "SELECCION_UNICA"
+                                                },
+                                                "puntaje": {
+                                                    "type": "integer",
+                                                    "example": 10
+                                                },
+                                                "respuestas": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "properties": {
+                                                            "respuesta": {
+                                                                "type": "string",
+                                                                "example": "Cristóbal Colón"
+                                                            },
+                                                            "es_correcta": {
+                                                                "type": "boolean",
+                                                                "example": true
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Quiz creado con éxito"
                     }
                 },
                 "security": [
@@ -472,6 +2390,14 @@
                                                     "slug": {
                                                         "type": "string",
                                                         "example": "introduccion-al-algebra"
+                                                    },
+                                                    "estado": {
+                                                        "type": "string",
+                                                        "example": "BORRADOR"
+                                                    },
+                                                    "tiene_contenido": {
+                                                        "type": "boolean",
+                                                        "example": false
                                                     }
                                                 },
                                                 "type": "object"
@@ -498,18 +2424,14 @@
                 "requestBody": {
                     "required": true,
                     "content": {
-                        "application/json": {
+                        "multipart/form-data": {
                             "schema": {
                                 "required": [
                                     "titulo",
                                     "slug",
-                                    "descripcion",
                                     "grado_id",
                                     "materia_id",
                                     "periodo_id",
-                                    "creado_por",
-                                    "portada",
-                                    "orden",
                                     "estado"
                                 ],
                                 "properties": {
@@ -542,8 +2464,9 @@
                                         "example": 1
                                     },
                                     "portada": {
+                                        "description": "Imagen de portada",
                                         "type": "string",
-                                        "example": "https://images.com/portada.jpg"
+                                        "format": "binary"
                                     },
                                     "orden": {
                                         "type": "integer",
@@ -600,9 +2523,10 @@
         "/temas/{id}": {
             "get": {
                 "tags": [
-                    "Temas"
+                    "Temas",
+                    "Contenido Estudiante"
                 ],
-                "summary": "Obtener tema por ID",
+                "summary": "Obtener el detalle de un tema y sus bloques de contenido",
                 "operationId": "14354866d72659c9a2257fba53c93104",
                 "parameters": [
                     {
@@ -634,6 +2558,38 @@
                                                 "titulo": {
                                                     "type": "string",
                                                     "example": "Introducción al Álgebra"
+                                                },
+                                                "slug": {
+                                                    "type": "string",
+                                                    "example": "introduccion-al-algebra"
+                                                },
+                                                "portada": {
+                                                    "type": "string",
+                                                    "example": "http://..."
+                                                },
+                                                "bloques": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "integer",
+                                                                "example": 1
+                                                            },
+                                                            "tipo": {
+                                                                "type": "string",
+                                                                "example": "TEXTO"
+                                                            },
+                                                            "contenido": {
+                                                                "type": "string",
+                                                                "example": "Hola mundo..."
+                                                            },
+                                                            "metadata": {
+                                                                "type": "object",
+                                                                "nullable": true
+                                                            }
+                                                        },
+                                                        "type": "object"
+                                                    }
                                                 }
                                             },
                                             "type": "object"
@@ -773,6 +2729,324 @@
                     }
                 ]
             }
+        },
+        "/temas/{id}/bloques": {
+            "post": {
+                "tags": [
+                    "Temas"
+                ],
+                "summary": "Sincronizar (guardar) los bloques de contenido de un tema",
+                "operationId": "d6da5ee3b417aeea92b79e441770acfd",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del tema al que pertenecen los bloques",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "bloques"
+                                ],
+                                "properties": {
+                                    "bloques": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "tipo": {
+                                                    "type": "string",
+                                                    "example": "TEXTO"
+                                                },
+                                                "contenido": {
+                                                    "type": "string",
+                                                    "example": "El software es..."
+                                                },
+                                                "metadata": {
+                                                    "type": "object",
+                                                    "example": "{\"clave\": \"valor\"}"
+                                                },
+                                                "orden": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "visible": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Bloques guardados exitosamente",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Bloques sincronizados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/usuarios": {
+            "get": {
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Obtener todos los usuarios",
+                "operationId": "32d416e112166de975e4b00441bda08d",
+                "responses": {
+                    "200": {
+                        "description": "Lista de usuarios recuperada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Usuarios recuperados con éxito."
+                                        },
+                                        "datos": {
+                                            "type": "array",
+                                            "items": {
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer",
+                                                        "example": 1
+                                                    },
+                                                    "nombre": {
+                                                        "type": "string",
+                                                        "example": "Juan Perez"
+                                                    },
+                                                    "correo": {
+                                                        "type": "string",
+                                                        "example": "juan@demo.com"
+                                                    },
+                                                    "rol": {
+                                                        "type": "string",
+                                                        "example": "ESTUDIANTE"
+                                                    },
+                                                    "estado": {
+                                                        "type": "string",
+                                                        "example": "ACTIVO"
+                                                    }
+                                                },
+                                                "type": "object"
+                                            }
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/usuarios/{id}/password": {
+            "put": {
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar contraseña de un usuario",
+                "operationId": "9636979c5328a1552053974dc6eaa287",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "password"
+                                ],
+                                "properties": {
+                                    "password": {
+                                        "type": "string",
+                                        "example": "nuevaClave123"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Contraseña actualizada con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Contraseña actualizada con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/usuarios/{id}/rol": {
+            "put": {
+                "tags": [
+                    "Usuarios"
+                ],
+                "summary": "Actualizar rol de un usuario",
+                "operationId": "72826a610c6b5e3be8ba422a1673e1f6",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "rol"
+                                ],
+                                "properties": {
+                                    "rol": {
+                                        "type": "string",
+                                        "example": "DOCENTE",
+                                        "enum": [
+                                            "ADMIN",
+                                            "DOCENTE",
+                                            "EDITOR",
+                                            "ESTUDIANTE"
+                                        ]
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Rol actualizado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string",
+                                            "example": "Rol actualizado con éxito."
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "rol": {
+                                                    "type": "string",
+                                                    "example": "DOCENTE"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean",
+                                            "example": false
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
         }
     },
     "components": {
@@ -788,8 +3062,24 @@
     },
     "tags": [
         {
+            "name": "Archivos",
+            "description": "Archivos"
+        },
+        {
             "name": "Autenticación",
             "description": "Autenticación"
+        },
+        {
+            "name": "Contenido Estudiante",
+            "description": "Contenido Estudiante"
+        },
+        {
+            "name": "Cuadros Teóricos",
+            "description": "Cuadros Teóricos"
+        },
+        {
+            "name": "Dashboard",
+            "description": "Dashboard"
         },
         {
             "name": "Grados",
@@ -800,8 +3090,24 @@
             "description": "Materias"
         },
         {
+            "name": "Periodos",
+            "description": "Periodos"
+        },
+        {
+            "name": "Progreso Estudiante",
+            "description": "Progreso Estudiante"
+        },
+        {
+            "name": "Quizzes",
+            "description": "Quizzes"
+        },
+        {
             "name": "Temas",
             "description": "Temas"
+        },
+        {
+            "name": "Usuarios",
+            "description": "Usuarios"
         }
     ]
 }

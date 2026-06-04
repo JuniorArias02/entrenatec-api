@@ -39,7 +39,8 @@ class AutenticacionControlador extends Controller
                 new OA\Property(property: 'datos', type: 'object', properties: [
                     new OA\Property(property: 'token', type: 'string', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'),
                     new OA\Property(property: 'tipo_token', type: 'string', example: 'bearer'),
-                    new OA\Property(property: 'expira_en', type: 'integer', example: 3600)
+                    new OA\Property(property: 'expira_en', type: 'integer', example: 3600),
+                    new OA\Property(property: 'rol', type: 'string', example: 'ADMIN')
                 ]),
                 new OA\Property(property: 'error', type: 'boolean', example: false)
             ]
@@ -76,12 +77,15 @@ class AutenticacionControlador extends Controller
             ], 401);
         }
 
+        $usuario = auth('api')->user();
+
         return response()->json([
             'mensaje' => 'Sesión iniciada con éxito.',
             'datos' => [
                 'token' => $token,
                 'tipo_token' => 'bearer',
-                'expira_en' => auth('api')->factory()->getTTL() * 60
+                'expira_en' => auth('api')->factory()->getTTL() * 60,
+                'rol' => $usuario->rol
             ],
             'error' => false
         ], 200);
