@@ -36,4 +36,23 @@ class CrearQuizRequest extends FormRequest
             'preguntas.*.respuestas.*.es_correcta' => 'required|boolean',
         ];
     }
+
+    public function withValidator($validator)
+    {
+        $validator->after(function ($validator) {
+            $preguntas = $this->input('preguntas');
+            if (is_array($preguntas)) {
+                $sumaTotal = array_reduce($preguntas, function ($carry, $pregunta) {
+                    return $carry + (isset($pregunta['puntaje']) ? (int) $pregunta['puntaje'] : 0);
+                }, 0);
+
+                if ($sumaTotal !== 100) {
+                    $validator->errors()->add(
+                        'preguntas',
+                        "La suma de los puntajes de todas las preguntas debe ser exactamente 100 puntos. Actualmente suma: {$sumaTotal} puntos."
+                    );
+                }
+            }
+        });
+    }
 }

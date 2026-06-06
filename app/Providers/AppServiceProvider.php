@@ -50,6 +50,11 @@ class AppServiceProvider extends ServiceProvider
             \App\Dominio\Quiz\Contratos\QuizRepositorio::class,
             \App\Infraestructura\Quiz\Repositorios\EloquentQuizRepositorio::class
         );
+
+        $this->app->bind(
+            \App\Dominio\SopaLetras\Contratos\SopaLetrasRepositorio::class,
+            \App\Infraestructura\SopaLetras\Repositorios\EloquentSopaLetrasRepositorio::class
+        );
     }
 
     /**

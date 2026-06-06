@@ -101,13 +101,11 @@ class AutenticacionControlador extends Controller
         content: new OA\MediaType(
             mediaType: 'application/json',
             schema: new OA\Schema(
-                required: ['nombre', 'correo', 'password', 'rol', 'estado'],
+                required: ['nombre', 'correo', 'password'],
                 properties: [
-                    new OA\Property(property: 'nombre', type: 'string', example: 'Junior Arias'),
-                    new OA\Property(property: 'correo', type: 'string', format: 'email', example: 'junior.arias02yt@gmail.com'),
-                    new OA\Property(property: 'password', type: 'string', format: 'password', example: 'qweasdzxc'),
-                    new OA\Property(property: 'rol', type: 'string', enum: ['ADMIN', 'DOCENTE', 'EDITOR'], example: 'DOCENTE'),
-                    new OA\Property(property: 'estado', type: 'string', enum: ['ACTIVO', 'INACTIVO'], example: 'ACTIVO')
+                    new OA\Property(property: 'nombre', type: 'string', example: 'Estudiante Nuevo'),
+                    new OA\Property(property: 'correo', type: 'string', format: 'email', example: 'estudiante@demo.com'),
+                    new OA\Property(property: 'password', type: 'string', format: 'password', example: '12345678')
                 ]
             )
         )
@@ -119,10 +117,10 @@ class AutenticacionControlador extends Controller
             properties: [
                 new OA\Property(property: 'mensaje', type: 'string', example: 'Usuario registrado con éxito.'),
                 new OA\Property(property: 'datos', type: 'object', properties: [
-                    new OA\Property(property: 'id', type: 'integer', example: 2),
-                    new OA\Property(property: 'nombre', type: 'string', example: 'Junior Arias'),
-                    new OA\Property(property: 'correo', type: 'string', example: 'junior.arias02yt@gmail.com'),
-                    new OA\Property(property: 'rol', type: 'string', example: 'DOCENTE'),
+                    new OA\Property(property: 'id', type: 'integer', example: 10),
+                    new OA\Property(property: 'nombre', type: 'string', example: 'Estudiante Nuevo'),
+                    new OA\Property(property: 'correo', type: 'string', example: 'estudiante@demo.com'),
+                    new OA\Property(property: 'rol', type: 'string', example: 'ESTUDIANTE'),
                     new OA\Property(property: 'estado', type: 'string', example: 'ACTIVO')
                 ]),
                 new OA\Property(property: 'error', type: 'boolean', example: false)
@@ -133,7 +131,13 @@ class AutenticacionControlador extends Controller
         CrearUsuarioRequest $request,
         CrearUsuarioAccion $crearUsuarioAccion
     ) {
-        $dto = CrearUsuarioDTO::desdeArray($request->validated());
+        $datosValidados = $request->validated();
+        
+        // Asignar por defecto ESTUDIANTE y ACTIVO si no se proveen
+        $datosValidados['rol'] = $datosValidados['rol'] ?? 'ESTUDIANTE';
+        $datosValidados['estado'] = $datosValidados['estado'] ?? 'ACTIVO';
+
+        $dto = CrearUsuarioDTO::desdeArray($datosValidados);
         $usuario = $crearUsuarioAccion->ejecutar($dto);
 
         return response()->json([

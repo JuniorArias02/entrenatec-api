@@ -24,7 +24,20 @@ Route::middleware('auth.escritura')->group(function () {
     
     // Rutas de Quizzes
     Route::get('quizzes', [App\Presentacion\Controladores\QuizControlador::class, 'obtenerTodos']);
+    Route::get('quizzes/{id}', [App\Presentacion\Controladores\QuizControlador::class, 'obtenerPorId']);
     Route::post('quizzes', [App\Presentacion\Controladores\QuizControlador::class, 'crear']);
+    Route::post('quizzes/{id}/evaluar', [App\Presentacion\Controladores\QuizControlador::class, 'evaluar']);
+
+    // Rutas de Preguntas
+    Route::post('quizzes/{quiz_id}/preguntas', [App\Presentacion\Controladores\QuizPreguntaControlador::class, 'agregar']);
+    Route::put('preguntas/{id}', [App\Presentacion\Controladores\QuizPreguntaControlador::class, 'actualizar']);
+    Route::delete('preguntas/{id}', [App\Presentacion\Controladores\QuizPreguntaControlador::class, 'eliminar']);
+
+    // Rutas de Sopa de Letras
+    Route::get('sopa-letras', [App\Presentacion\Controladores\SopaLetrasControlador::class, 'obtenerTodos']);
+    Route::post('sopa-letras', [App\Presentacion\Controladores\SopaLetrasControlador::class, 'crear']);
+    Route::get('sopa-letras/{id}', [App\Presentacion\Controladores\SopaLetrasControlador::class, 'obtenerPorId']);
+    Route::post('sopa-letras/{id}/evaluar', [App\Presentacion\Controladores\SopaLetrasControlador::class, 'evaluar']);
 
     // Rutas de Archivos
     Route::post('archivos', [App\Presentacion\Controladores\ArchivoControlador::class, 'subir']);

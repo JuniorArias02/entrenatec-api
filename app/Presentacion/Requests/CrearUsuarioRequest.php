@@ -28,8 +28,8 @@ class CrearUsuarioRequest extends FormRequest
             'nombre' => ['required', 'string', 'max:150'],
             'correo' => ['required', 'string', 'email', 'max:150', 'unique:usuarios,correo'],
             'password' => ['required', 'string', 'min:6', 'max:255'],
-            'rol' => ['required', new Enum(RolUsuarioEnum::class)],
-            'estado' => ['required', new Enum(EstadoUsuarioEnum::class)],
+            'rol' => ['nullable', new Enum(RolUsuarioEnum::class)],
+            'estado' => ['nullable', new Enum(EstadoUsuarioEnum::class)],
         ];
     }
 }

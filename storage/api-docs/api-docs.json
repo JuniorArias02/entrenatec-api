@@ -200,41 +200,22 @@
                                 "required": [
                                     "nombre",
                                     "correo",
-                                    "password",
-                                    "rol",
-                                    "estado"
+                                    "password"
                                 ],
                                 "properties": {
                                     "nombre": {
                                         "type": "string",
-                                        "example": "Junior Arias"
+                                        "example": "Estudiante Nuevo"
                                     },
                                     "correo": {
                                         "type": "string",
                                         "format": "email",
-                                        "example": "junior.arias02yt@gmail.com"
+                                        "example": "estudiante@demo.com"
                                     },
                                     "password": {
                                         "type": "string",
                                         "format": "password",
-                                        "example": "qweasdzxc"
-                                    },
-                                    "rol": {
-                                        "type": "string",
-                                        "example": "DOCENTE",
-                                        "enum": [
-                                            "ADMIN",
-                                            "DOCENTE",
-                                            "EDITOR"
-                                        ]
-                                    },
-                                    "estado": {
-                                        "type": "string",
-                                        "example": "ACTIVO",
-                                        "enum": [
-                                            "ACTIVO",
-                                            "INACTIVO"
-                                        ]
+                                        "example": "12345678"
                                     }
                                 },
                                 "type": "object"
@@ -257,19 +238,19 @@
                                             "properties": {
                                                 "id": {
                                                     "type": "integer",
-                                                    "example": 2
+                                                    "example": 10
                                                 },
                                                 "nombre": {
                                                     "type": "string",
-                                                    "example": "Junior Arias"
+                                                    "example": "Estudiante Nuevo"
                                                 },
                                                 "correo": {
                                                     "type": "string",
-                                                    "example": "junior.arias02yt@gmail.com"
+                                                    "example": "estudiante@demo.com"
                                                 },
                                                 "rol": {
                                                     "type": "string",
-                                                    "example": "DOCENTE"
+                                                    "example": "ESTUDIANTE"
                                                 },
                                                 "estado": {
                                                     "type": "string",
@@ -2357,6 +2338,535 @@
                 ]
             }
         },
+        "/api/quizzes/{id}": {
+            "get": {
+                "tags": [
+                    "Quizzes"
+                ],
+                "summary": "Obtener un quiz específico con sus preguntas y respuestas",
+                "operationId": "324150acedd189d19347894457b6b061",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del Quiz",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Quiz obtenido con éxito"
+                    },
+                    "404": {
+                        "description": "Quiz no encontrado"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/quizzes/{id}/evaluar": {
+            "post": {
+                "tags": [
+                    "Quizzes"
+                ],
+                "summary": "Evaluar un quiz (enviar respuestas de un estudiante)",
+                "operationId": "ea548287c1436bb3d691fb7df5ed0b08",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del Quiz a evaluar",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "respuestas"
+                                ],
+                                "properties": {
+                                    "respuestas": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "pregunta_id": {
+                                                    "type": "integer",
+                                                    "example": 1
+                                                },
+                                                "respuesta_id": {
+                                                    "type": "integer",
+                                                    "example": 3
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Quiz evaluado con éxito",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "mensaje": {
+                                            "type": "string"
+                                        },
+                                        "datos": {
+                                            "properties": {
+                                                "intento_id": {
+                                                    "type": "integer"
+                                                },
+                                                "puntaje_obtenido": {
+                                                    "type": "integer"
+                                                },
+                                                "aprobado": {
+                                                    "type": "boolean"
+                                                },
+                                                "nivel_desempeno": {
+                                                    "type": "string",
+                                                    "example": "Alto"
+                                                }
+                                            },
+                                            "type": "object"
+                                        },
+                                        "error": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/quizzes/{quiz_id}/preguntas": {
+            "post": {
+                "tags": [
+                    "Preguntas Quiz"
+                ],
+                "summary": "Agregar una pregunta a un quiz existente",
+                "operationId": "44e923d8352b163ce9915d5a4e4f55f4",
+                "parameters": [
+                    {
+                        "name": "quiz_id",
+                        "in": "path",
+                        "description": "ID del Quiz",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "pregunta",
+                                    "tipo",
+                                    "puntaje",
+                                    "respuestas"
+                                ],
+                                "properties": {
+                                    "pregunta": {
+                                        "type": "string",
+                                        "example": "¿Cuál es la capital de Francia?"
+                                    },
+                                    "tipo": {
+                                        "type": "string",
+                                        "example": "SELECCION_UNICA"
+                                    },
+                                    "puntaje": {
+                                        "type": "integer",
+                                        "example": 10
+                                    },
+                                    "orden": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "respuestas": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "respuesta": {
+                                                    "type": "string",
+                                                    "example": "París"
+                                                },
+                                                "es_correcta": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Pregunta agregada con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/preguntas/{id}": {
+            "put": {
+                "tags": [
+                    "Preguntas Quiz"
+                ],
+                "summary": "Actualizar una pregunta existente",
+                "operationId": "8058e300dce3387b48a78e8545d34dc5",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la Pregunta",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "pregunta",
+                                    "tipo",
+                                    "puntaje",
+                                    "respuestas"
+                                ],
+                                "properties": {
+                                    "pregunta": {
+                                        "type": "string",
+                                        "example": "¿Cuál es la capital de Italia?"
+                                    },
+                                    "tipo": {
+                                        "type": "string",
+                                        "example": "SELECCION_UNICA"
+                                    },
+                                    "puntaje": {
+                                        "type": "integer",
+                                        "example": 10
+                                    },
+                                    "orden": {
+                                        "type": "integer",
+                                        "example": 1
+                                    },
+                                    "respuestas": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "respuesta": {
+                                                    "type": "string",
+                                                    "example": "Roma"
+                                                },
+                                                "es_correcta": {
+                                                    "type": "boolean",
+                                                    "example": true
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Pregunta actualizada con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "Preguntas Quiz"
+                ],
+                "summary": "Eliminar una pregunta",
+                "operationId": "ae9cd87a87befb845dede202ec303030",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la Pregunta a eliminar",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Pregunta eliminada con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sopa-letras": {
+            "get": {
+                "tags": [
+                    "Sopa de Letras"
+                ],
+                "summary": "Obtener lista de sopas de letras filtradas",
+                "operationId": "3b0aae022a27d152c0b49000426c111e",
+                "parameters": [
+                    {
+                        "name": "tema_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "grado_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "periodo_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Juegos obtenidos con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            },
+            "post": {
+                "tags": [
+                    "Sopa de Letras"
+                ],
+                "summary": "Crear un juego de Sopa de Letras con palabras ocultas",
+                "operationId": "e54799c8714be03437540124b7739954",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "titulo",
+                                    "tiempo_limite",
+                                    "puntaje_total",
+                                    "estado",
+                                    "palabras"
+                                ],
+                                "properties": {
+                                    "titulo": {
+                                        "type": "string",
+                                        "example": "Animales de la Selva"
+                                    },
+                                    "descripcion": {
+                                        "type": "string",
+                                        "example": "Encuentra los animales ocultos."
+                                    },
+                                    "tema_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "grado_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "materia_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "periodo_id": {
+                                        "type": "integer",
+                                        "example": 1,
+                                        "nullable": true
+                                    },
+                                    "tiempo_limite": {
+                                        "description": "Tiempo en segundos",
+                                        "type": "integer",
+                                        "example": 120
+                                    },
+                                    "puntaje_total": {
+                                        "type": "integer",
+                                        "example": 100
+                                    },
+                                    "estado": {
+                                        "type": "string",
+                                        "example": "PUBLICADO"
+                                    },
+                                    "palabras": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "example": "TIGRE"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Sopa de letras creada con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sopa-letras/{id}": {
+            "get": {
+                "tags": [
+                    "Sopa de Letras"
+                ],
+                "summary": "Obtener un juego de Sopa de Letras específico",
+                "operationId": "e61af1b96483de5913227559317cc6f2",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Juego obtenido con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/sopa-letras/{id}/evaluar": {
+            "post": {
+                "tags": [
+                    "Sopa de Letras"
+                ],
+                "summary": "Evaluar el intento de la Sopa de Letras",
+                "operationId": "3b96d385f69919e9500de9a1a6bc8e77",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID de la Sopa de Letras",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "palabras_encontradas",
+                                    "tiempo_utilizado"
+                                ],
+                                "properties": {
+                                    "palabras_encontradas": {
+                                        "description": "Cantidad de palabras que encontró el estudiante",
+                                        "type": "integer",
+                                        "example": 5
+                                    },
+                                    "tiempo_utilizado": {
+                                        "description": "Tiempo en segundos que tardó",
+                                        "type": "integer",
+                                        "example": 60
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Intento evaluado con éxito"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
         "/temas": {
             "get": {
                 "tags": [
@@ -3100,6 +3610,14 @@
         {
             "name": "Quizzes",
             "description": "Quizzes"
+        },
+        {
+            "name": "Preguntas Quiz",
+            "description": "Preguntas Quiz"
+        },
+        {
+            "name": "Sopa de Letras",
+            "description": "Sopa de Letras"
         },
         {
             "name": "Temas",
