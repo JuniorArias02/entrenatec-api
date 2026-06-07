@@ -1,0 +1,182 @@
+{
+  "grado": "Once",
+  "periodo": 3,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Solución de problemas con tecnología",
+  "temas": [
+    {
+      "titulo": "Competencias y Estándares de Solución",
+      "descripcion": "El marco metodológico para enfrentar problemas y fallas en sistemas tecnológicos.",
+      "portada": "imagenes/competencias_once_p3.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Enfoque de la Ingeniería",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Todo problema tecnológico real está sujeto a condiciones, restricciones (presupuesto, tiempo, física) y especificaciones estrictas. Identificarlas es el paso cero de cualquier proyecto.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Estándar Básico: Detecto, describo y formulo hipótesis sobre fallas en sistemas tecnológicos sencillos, siguiendo un proceso de pruebas y descarte, y propongo estrategias para repararlas.",
+          "metadata": {
+            "formato": "destacado"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Optimización e Innovación",
+      "descripcion": "Cómo llevar una solución funcional al siguiente nivel de eficiencia.",
+      "portada": "imagenes/optimizacion_innovacion.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Más Allá de Hacer que Funcione",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Una vez que una solución resuelve el problema básico, el siguiente reto es la optimización. ¿Puede ser más rápida? ¿Más barata? ¿Más ecológica? Esto se logra mediante investigación, desarrollo y experimentación constante.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Criterios de Análisis",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Valoración de factores tecnológicos",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Técnicos: ¿Los materiales son los adecuados y duraderos?",
+              "Económicos: ¿El costo de producción justifica el beneficio?",
+              "Culturales/Políticos: ¿La solución respeta las normativas y costumbres de la comunidad?"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Método de Prueba y Descarte",
+      "descripcion": "El arte del diagnóstico técnico sistemático.",
+      "portada": "imagenes/prueba_descarte.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Mentalidad de Detective",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Cuando un sistema falla, no se adivina; se diagnostica. El método de prueba y descarte (divide y vencerás) implica aislar componentes para descubrir dónde está el error.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Pasos del Proceso Diagnóstico",
+          "metadata": {
+            "filas": [
+              [
+                "1. Recolección de síntomas",
+                "Observar qué hace o deja de hacer el sistema.",
+                "No enciende ninguna luz, ni suenan los ventiladores."
+              ],
+              [
+                "2. Formulación de Hipótesis",
+                "Plantear las causas más probables de mayor a menor.",
+                "A) Cable desconectado. B) Fuente quemada. C) Toma de corriente sin luz."
+              ],
+              [
+                "3. Pruebas de Descarte",
+                "Aislar y probar cada hipótesis una por una.",
+                "Probar con otro cable. Si no funciona, probar otra toma eléctrica."
+              ],
+              [
+                "4. Reparación",
+                "Aplicar la solución a la falla confirmada.",
+                "Cambiar la fuente de poder dañada."
+              ]
+            ],
+            "cabeceras": [
+              "Paso",
+              "Acción",
+              "Ejemplo (PC no enciende)"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Simulacro: Tu red de internet en casa ha caído. Aplica el método de prueba y descarte de 4 pasos para encontrar el origen de la falla.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Diseño Centrado en lo Humano",
+      "descripcion": "Antropometría, ergonomía y responsabilidad integral en el diseño.",
+      "portada": "imagenes/diseno_humano.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Tecnología a la Medida del Hombre",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Al solucionar problemas tecnológicos, no basta con que el artefacto funcione mecánicamente; debe ser usable y seguro para los humanos y el medio ambiente.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Factores de Diseño Integrales",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Evidencias de Diseño",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Antropometría: Diseñar considerando las medidas y proporciones del cuerpo humano (ej. altura de un escritorio).",
+              "Ergonomía: Asegurar la comodidad y salud del usuario a largo plazo (ej. sillas ergonómicas, mouses verticales).",
+              "Seguridad y Ambiente: Materiales no tóxicos y procesos que generen la menor huella de carbono posible."
+            ]
+          }
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Evaluación de casos de diseño ergonómico y ambiental.",
+          "metadata": {
+            "dificultad": "dificil"
+          }
+        }
+      ]
+    }
+  ]
+}

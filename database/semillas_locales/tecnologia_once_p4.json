@@ -1,0 +1,182 @@
+{
+  "grado": "Once",
+  "periodo": 4,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Tecnología y sociedad",
+  "temas": [
+    {
+      "titulo": "Ética, Salud y Entorno",
+      "descripcion": "Reflexión profunda sobre las implicaciones sociales de la tecnología moderna.",
+      "portada": "imagenes/etica_salud_once.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Competencias Ciudadanas en la Red",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Reconozco las implicaciones éticas, sociales y ambientales de las manifestaciones tecnológicas del mundo en que vivo y actúo responsablemente.",
+          "metadata": {
+            "formato": "destacado"
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Debates Críticos",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Como futuros profesionales, la tecnología ya no es neutral. Las innovaciones en salud (como la IA médica o la manipulación genética) generan grandes debates éticos. Asimismo, la evaluación de procesos productivos debe considerar obligatoriamente los efectos sobre el medio ambiente y las comunidades locales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Foro de Discusión: 'La automatización de la medicina: ¿Beneficio absoluto o riesgo para la privacidad de nuestros datos de salud?'",
+          "metadata": {
+            "tipo_actividad": "foro"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Herramientas Ofimáticas para el Mundo Laboral",
+      "descripcion": "El uso avanzado de hojas de cálculo como ventaja competitiva en empresas.",
+      "portada": "imagenes/ofimatica_avanzada.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Agilizando Procesos Empresariales",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Las empresas modernas generan millones de datos diarios. El manejo e implementación de herramientas ofimáticas (específicamente Excel o Google Sheets) ya no se trata de hacer sumas simples, sino de automatizar procesos, analizar información y ganar eficiencia laboral.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Fórmulas Avanzadas y Organización",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Habilidades empresariales requeridas",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Definición de nombres a celdas y rangos para facilitar la lectura de fórmulas complejas.",
+              "Generación de fórmulas utilizando funciones de fechas (ej. calcular días laborados o vencimientos).",
+              "Operaciones anidadas con funciones lógicas (SI, BUSCARV, INDICE, COINCIDIR)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Auditoría de Datos: Control de Errores",
+      "descripcion": "Interpretación y solución de códigos de error estándar en hojas de cálculo.",
+      "portada": "imagenes/errores_excel.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Cuando la Fórmula Falla",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En un entorno financiero o administrativo, un error en una fórmula puede costar millones. Reconocer y comprender los códigos de errores estándar es una habilidad vital para la auditoría de datos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Diccionario de Errores Comunes",
+          "metadata": {
+            "filas": [
+              [
+                "#¡DIV/0!",
+                "Intento de división por cero o por una celda vacía.",
+                "Revisar el divisor o usar la función SI.ERROR."
+              ],
+              [
+                "#N/A",
+                "Valor no disponible (muy común en BUSCARV).",
+                "Asegurarse de que el valor buscado exista en la matriz de búsqueda."
+              ],
+              [
+                "#¡VALOR!",
+                "Tipo de dato incorrecto (ej. sumar un número con una letra).",
+                "Verificar que todas las celdas implicadas contengan valores numéricos."
+              ],
+              [
+                "#¡REF!",
+                "Referencia de celda no válida.",
+                "Ocurre al eliminar una fila o columna que estaba siendo usada en una fórmula."
+              ]
+            ],
+            "cabeceras": [
+              "Código de Error",
+              "Significado",
+              "Posible Solución"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Práctica de Auditoría: Descarga el archivo de nómina simulada y encuentra los 3 errores intencionales (#¡VALOR! y #¡REF!) escondidos en las fórmulas.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Proyecto Final: Práctica Empresarial",
+      "descripcion": "Demostración integral de competencias ofimáticas aplicadas a un entorno real.",
+      "portada": "imagenes/proyecto_empresarial.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Cierre Académico y Laboral",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Evidencias de cierre de año",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Aplica herramientas ofimáticas en la resolución de un caso de estudio real.",
+              "Estructura un dashboard que resume datos usando nombres de rangos y fechas automatizadas.",
+              "Argumenta éticamente el uso de los datos obtenidos durante el proyecto."
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Al dominar estas herramientas, te gradúas no solo como un estudiante de once, sino como un ciudadano digital preparado para enfrentar los retos analíticos del sector productivo o universitario.",
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}

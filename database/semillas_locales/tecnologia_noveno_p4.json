@@ -1,0 +1,340 @@
+{
+  "grado": "Noveno",
+  "periodo": 4,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Tecnología y sociedad",
+  "temas": [
+    {
+      "titulo": "Impacto de la tecnología en la sociedad",
+      "descripcion": "Análisis de cómo las invenciones moldean la cultura, la economía y las dinámicas sociales.",
+      "portada": "imagenes/impacto_sociedad.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Sociedad Transformada",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Vivimos en una época en la que la tecnología dicta el ritmo de los cambios sociales. Ya no se trata solo de tener nuevos gadgets; la tecnología altera fundamentalmente cómo percibimos el mundo, cómo nos relacionamos y qué valores priorizamos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Un Mundo Interconectado",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La globalización impulsada por internet ha derribado fronteras físicas, permitiendo el intercambio de culturas en tiempo real. Hoy, una tendencia en Asia puede llegar a América Latina en cuestión de minutos. Sin embargo, esto también ha generado fenómenos como la 'cultura de la inmediatez' o la homogeneización cultural.",
+          "metadata": {}
+        },
+        {
+          "tipo": "GALERIA",
+          "contenido": "Evolución social tecnológica",
+          "metadata": {
+            "imagenes": [
+              "imagenes/sociedad_antes.jpg",
+              "imagenes/sociedad_ahora.jpg"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Foro de opinión: ¿Crees que la tecnología nos ha hecho más sociables o más solitarios?",
+          "metadata": {
+            "tipo_actividad": "foro"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Tecnología y medio ambiente",
+      "descripcion": "La paradoja tecnológica: destruir el ecosistema y al mismo tiempo ser nuestra única salvación.",
+      "portada": "imagenes/tec_medio_ambiente.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Paradoja Ambiental",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El desarrollo industrial ha cobrado un precio alto al planeta: deforestación, emisiones masivas de CO2 y millones de toneladas de basura electrónica (e-waste). Anualmente desechamos millones de teléfonos y computadoras que contaminan la tierra con metales pesados.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Tecnologías Verdes (GreenTech)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Irónicamente, la tecnología es también la única forma viable de revertir el daño. El desarrollo de paneles solares más eficientes, turbinas eólicas, vehículos eléctricos y sistemas de limpieza oceánica automatizados son nuestra mejor esperanza para mitigar el cambio climático.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Innovaciones para el Planeta",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Baterías de estado sólido (mayor duración y menor contaminación).",
+              "Redes eléctricas inteligentes (Smart Grids).",
+              "Agricultura de precisión para ahorrar agua.",
+              "Captura de carbono directa del aire (DAC)."
+            ]
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "imagenes/infografia_energia_renovable.jpg",
+          "metadata": {
+            "alt": "Infografía sobre fuentes de energía renovable"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Cambios en la comunicación y el trabajo",
+      "descripcion": "Del horario fijo a la oficina global: el teletrabajo y la economía digital.",
+      "portada": "imagenes/teletrabajo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Nueva Era Laboral",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El concepto de 'ir al trabajo' está mutando. Las herramientas de colaboración en la nube (videollamadas, documentos compartidos, gestión de tareas) han hecho que el trabajo remoto (teletrabajo) sea una realidad masiva.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Nómada Digital",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Hoy es posible trabajar para una empresa en Europa, mientras se vive en América Latina, requiriendo únicamente una laptop y buena conexión a internet. Esto abre oportunidades laborales increíbles, pero también borra la línea entre el tiempo de trabajo y el descanso.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Trabajo Tradicional vs Economía Digital",
+          "metadata": {
+            "filas": [
+              [
+                "Ubicación",
+                "Oficina física",
+                "En cualquier lugar (Remoto)"
+              ],
+              [
+                "Horario",
+                "Fijo (ej. 8 a 5)",
+                "Flexible (Basado en objetivos)"
+              ],
+              [
+                "Comunicación",
+                "Reuniones presenciales",
+                "Videollamadas y chats asíncronos"
+              ]
+            ],
+            "cabeceras": [
+              "Característica",
+              "Trabajo Tradicional",
+              "Economía Digital"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Inteligencia artificial y futuro",
+      "descripcion": "El impacto de las máquinas que aprenden por sí mismas en nuestro día a día.",
+      "portada": "imagenes/inteligencia_artificial.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Despertar de las Máquinas",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La Inteligencia Artificial (IA) ya no es ciencia ficción. Cuando Netflix te recomienda una película, o cuando un médico usa un software para detectar anomalías en una radiografía más rápido que el ojo humano, estás viendo a la IA en acción.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Machine Learning (Aprendizaje Automático)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En lugar de programar a la computadora con reglas fijas, el 'Machine Learning' le proporciona miles de datos para que la máquina encuentre patrones y aprenda por sí sola. Así funcionan los autos autónomos o las IAs generativas de texto e imágenes.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "El Futuro del Empleo",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Muchos trabajos repetitivos y administrativos serán automatizados.",
+              "Aparecerán nuevas profesiones: Ingeniero de Prompts, Especialista en Ética de IA.",
+              "La habilidad más valorada será la creatividad y la inteligencia emocional humana."
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Noticia de última hora: \"IAs logran diagnosticar enfermedades en fase temprana con un 98% de precisión, revolucionando el campo de la medicina preventiva.\"",
+          "metadata": {
+            "formato": "cita"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Dependencia tecnológica",
+      "descripcion": "Cuando la herramienta se vuelve una extensión obligatoria de nuestro cuerpo.",
+      "portada": "imagenes/dependencia_tecnologica.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "¿Podemos Vivir Sin Pantallas?",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "¿Qué pasa cuando se va la luz o el internet? Sentimos una desconexión casi física. La dependencia tecnológica se da cuando el uso de dispositivos interfiere negativamente en la vida social, familiar y académica.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Síntomas de Alerta",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Indicadores de nomofobia (miedo a estar sin el celular)",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Sentir ansiedad extrema al no tener el teléfono cerca.",
+              "Phubbing: Ignorar a la persona que tienes enfrente por mirar la pantalla.",
+              "Vibración fantasma: Creer que el teléfono vibró cuando no fue así.",
+              "Pérdida de noción del tiempo navegando (scroll infinito)."
+            ]
+          }
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Test personal: ¿Eres dependiente de tu smartphone?",
+          "metadata": {
+            "dificultad": "basico"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Ética y tecnología",
+      "descripcion": "Los límites morales en la era digital: desde la privacidad hasta los derechos de las máquinas.",
+      "portada": "imagenes/etica_tecnologia.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Los Límites de lo Posible",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El hecho de que podamos crear algo tecnológicamente no significa que debamos hacerlo. La tecnoética es la disciplina que se pregunta si los desarrollos tecnológicos respetan la dignidad humana y los derechos fundamentales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Dilemas Morales de la Era Digital",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Ejemplos de Dilemas Éticos",
+          "metadata": {
+            "filas": [
+              [
+                "Edición Genética (CRISPR)",
+                "Curar enfermedades hereditarias.",
+                "¿Es ético crear bebés 'de diseño' con rasgos elegidos a la carta?"
+              ],
+              [
+                "Autos Autónomos",
+                "Menos accidentes por error humano.",
+                "En un choque inminente, ¿debe el auto sacrificar al pasajero o a los peatones?"
+              ],
+              [
+                "Redes Sociales",
+                "Conexión global y comunidades.",
+                "Los algoritmos polarizan a la sociedad y manipulan la atención para generar adicción y dinero."
+              ],
+              [
+                "Reconocimiento Facial",
+                "Seguridad en aeropuertos y teléfonos.",
+                "Pérdida del derecho al anonimato público y vigilancia masiva estatal."
+              ]
+            ],
+            "cabeceras": [
+              "Tecnología",
+              "Avance Positivo",
+              "Dilema Ético"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Debate Final: En un accidente inevitable, ¿cómo programarías a un auto autónomo para tomar la decisión moral correcta?",
+          "metadata": {
+            "tipo_actividad": "foro"
+          }
+        }
+      ]
+    }
+  ]
+}

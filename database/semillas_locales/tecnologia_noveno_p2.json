@@ -1,0 +1,361 @@
+{
+  "grado": "Noveno",
+  "periodo": 2,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Apropiación y uso de la tecnología",
+  "temas": [
+    {
+      "titulo": "Uso responsable de dispositivos tecnológicos",
+      "descripcion": "Aprender a usar la tecnología a nuestro favor sin que ella nos controle.",
+      "portada": "imagenes/uso_responsable.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Equilibrio Digital",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Hoy en día, estamos rodeados de pantallas: celulares, tablets, computadoras y televisores. Si bien estos dispositivos nos facilitan la vida, su uso excesivo puede afectar nuestra salud física (problemas de visión, postura) y mental (ansiedad, falta de sueño).",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Reglas para un uso saludable",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Recomendaciones prácticas",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Regla 20-20-20: Cada 20 minutos, mira a 20 pies (6 metros) de distancia durante 20 segundos.",
+              "Establecer horarios libres de pantallas, especialmente antes de dormir.",
+              "Desactivar notificaciones no esenciales para evitar distracciones constantes."
+            ]
+          }
+        },
+        {
+          "tipo": "VIDEO",
+          "contenido": "https://www.youtube.com/embed/ejemplo_uso_responsable",
+          "metadata": {
+            "plataforma": "youtube",
+            "descripcion": "Video sobre higiene digital"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Herramientas digitales en la educación",
+      "descripcion": "Cómo aprovechar el internet y el software para potenciar el aprendizaje.",
+      "portada": "imagenes/herramientas_educacion.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Aula en tus Manos",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El internet es la biblioteca más grande de la historia de la humanidad. Usar la tecnología en la educación no solo significa ver videos; implica ser creadores de contenido, investigar fuentes confiables y colaborar con personas en todo el mundo.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Herramientas clave",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Tipos de Herramientas",
+          "metadata": {
+            "filas": [
+              [
+                "Productividad",
+                "Google Workspace / Office 365",
+                "Documentos y presentaciones colaborativas"
+              ],
+              [
+                "Organización",
+                "Trello / Notion",
+                "Gestión de tareas y apuntes"
+              ],
+              [
+                "Aprendizaje",
+                "Khan Academy / Duolingo",
+                "Cursos interactivos y práctica"
+              ]
+            ],
+            "cabeceras": [
+              "Tipo",
+              "Ejemplo",
+              "Uso"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Prueba organizar tu semana escolar usando una herramienta digital.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Seguridad en internet",
+      "descripcion": "Protege tu información y privacidad en el vasto mundo del ciberespacio.",
+      "portada": "imagenes/seguridad_internet.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Tu Escudo Digital",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Al igual que no dejarías la puerta de tu casa abierta, no debes dejar tu información personal expuesta en internet. La ciberseguridad es la práctica de proteger sistemas, redes y programas de ataques digitales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Amenazas Comunes",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Peligros en la red",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Phishing: Sitios falsos que intentan robar tus contraseñas.",
+              "Malware: Software malicioso (virus) que daña tu dispositivo.",
+              "Robo de identidad: Usurpación de tu información personal."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Consejos de Seguridad Online",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Buenas prácticas",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Usa contraseñas largas y diferentes para cada sitio.",
+              "Activa la autenticación de dos factores (2FA).",
+              "No hagas clic en enlaces sospechosos de correos desconocidos."
+            ]
+          }
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Cuestionario de ciberseguridad",
+          "metadata": {
+            "dificultad": "intermedio"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Redes sociales y su buen uso",
+      "descripcion": "Construyendo relaciones positivas y seguras en plataformas digitales.",
+      "portada": "imagenes/redes_sociales.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Más allá de los Likes",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Las redes sociales son excelentes para mantenernos en contacto, pero también pueden ser una fuente de desinformación y estrés. Lo que publicas en internet se convierte en tu 'huella digital', y es casi imposible de borrar.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Ciberacoso (Cyberbullying)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Es el uso de medios digitales para acosar, amenazar o humillar a otra persona. Es importante no ser cómplice, reportar cuentas abusivas y buscar ayuda si tú o alguien que conoces es víctima.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Etiqueta Digital (Netiqueta)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Reglas de convivencia",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Trata a los demás con el mismo respeto que en persona.",
+              "No compartas información privada de otros sin su permiso.",
+              "Verifica la información antes de compartirla para evitar 'Fake News'."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Ventajas y desventajas de la tecnología",
+      "descripcion": "Análisis crítico para entender que la tecnología es un arma de doble filo.",
+      "portada": "imagenes/ventajas_desventajas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Balanza Tecnológica",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Cada avance tecnológico trae consigo beneficios inmensos, pero también crea nuevos problemas que la sociedad debe resolver. Tener un pensamiento crítico sobre esto es esencial.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Comparativa de Impactos",
+          "metadata": {
+            "filas": [
+              [
+                "Comunicación",
+                "Conexión instantánea global",
+                "Pérdida de interacción cara a cara"
+              ],
+              [
+                "Información",
+                "Acceso a todo el conocimiento",
+                "Exceso de información y noticias falsas"
+              ],
+              [
+                "Entretenimiento",
+                "Opciones ilimitadas (streaming, juegos)",
+                "Sedentarismo y aislamiento social"
+              ]
+            ],
+            "cabeceras": [
+              "Ámbito",
+              "Ventaja",
+              "Desventaja"
+            ]
+          }
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Adivina si es ventaja o desventaja",
+          "metadata": {
+            "tipo_juego": "clasificacion"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Ciudadanía digital",
+      "descripcion": "Nuestros derechos y deberes como habitantes del mundo virtual.",
+      "portada": "imagenes/ciudadania_digital.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Ciudadano del Siglo XXI",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Ser ciudadano digital significa comprender los asuntos humanos, culturales y sociales relacionados con el uso de las Tecnologías de la Información y la Comunicación (TIC), así como la aplicación de conductas pertinentes a esa comprensión.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Derechos Digitales",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Lo que nos corresponde",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Derecho a la privacidad y a la protección de datos personales.",
+              "Derecho a la libre expresión en línea.",
+              "Derecho al acceso a internet de forma igualitaria."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Deberes Digitales",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Nuestra responsabilidad",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Respetar la propiedad intelectual (no piratear).",
+              "Proteger nuestra propia privacidad.",
+              "Denunciar el contenido ilegal o abusivo."
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Debate: ¿Debería el acceso a internet ser un derecho humano fundamental?",
+          "metadata": {
+            "tipo_actividad": "foro"
+          }
+        }
+      ]
+    }
+  ]
+}

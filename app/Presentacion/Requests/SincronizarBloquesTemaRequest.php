@@ -15,7 +15,7 @@ class SincronizarBloquesTemaRequest extends FormRequest
     {
         return [
             'bloques' => 'required|array',
-            'bloques.*.tipo' => 'required|string|in:TITULO,SUBTITULO,TEXTO,IMAGEN,GALERIA,VIDEO,PDF,LINK,TABLA,LISTA,CODIGO,CUADRO_TEORICO,ACTIVIDAD,SEPARADOR',
+            'bloques.*.tipo' => 'required|string|in:TITULO,SUBTITULO,TEXTO,IMAGEN,GALERIA,VIDEO,PDF,LINK,TABLA,LISTA,CODIGO,CUADRO_TEORICO,ACTIVIDAD,QUIZ,MINIJUEGO,SEPARADOR',
             'bloques.*.contenido' => 'nullable|string',
             'bloques.*.metadata' => 'nullable|array',
             'bloques.*.orden' => 'required|integer',

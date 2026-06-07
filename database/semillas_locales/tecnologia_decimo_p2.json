@@ -1,0 +1,296 @@
+{
+  "grado": "Décimo",
+  "periodo": 2,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Apropiación y uso de la tecnología",
+  "temas": [
+    {
+      "titulo": "Uso eficiente y seguro de la tecnología",
+      "descripcion": "Cómo utilizar la tecnología de manera segura, responsable y eficiente en diferentes espacios.",
+      "portada": "imagenes/uso_seguro_decimo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Cultura de la Ciberseguridad",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Para un estudiante de décimo grado que está a un paso de la universidad o del mundo laboral, comprender los principios de funcionamiento de los artefactos tecnológicos es esencial. Ya no se trata solo de saber hacer clic, sino de entender cómo interactúan el software y el hardware para proteger nuestra información.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Criterios de Selección y Prevención",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Lineamientos para una apropiación segura",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Selección de herramientas: Evaluar el software según su licencia, privacidad y eficiencia (ej. elegir software libre o privativo con base en la necesidad).",
+              "Prevención de riesgos: Identificar redes Wi-Fi inseguras, mantener los equipos actualizados y evitar la exposición pública de datos sensibles.",
+              "Uso eficiente: Optimizar la memoria, la batería y el rendimiento de los equipos mediante buenas prácticas de mantenimiento lógico."
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "“La tecnología debe utilizarse de manera segura, eficiente y responsable para solucionar necesidades y mejorar la calidad de vida.”",
+          "metadata": {
+            "formato": "cita"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Normas de seguridad industrial",
+      "descripcion": "Fundamentos y protocolos para prevenir accidentes en talleres y entornos tecnológicos.",
+      "portada": "imagenes/seguridad_industrial.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Prevención y Vida en el Trabajo",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Cuando interactuamos físicamente con herramientas tecnológicas, máquinas y circuitos eléctricos, el riesgo de accidentes está siempre presente. Las normas de seguridad industrial no son sugerencias; son protocolos estrictos diseñados para salvaguardar la vida.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Elementos de Protección Personal (EPP)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Equipo de Seguridad Obligatorio",
+          "metadata": {
+            "filas": [
+              [
+                "Gafas de seguridad",
+                "Ojos",
+                "Corte de materiales, soldadura, uso de químicos."
+              ],
+              [
+                "Guantes aislantes/de carnaza",
+                "Manos",
+                "Manejo de herramientas calientes, electricidad o bordes cortantes."
+              ],
+              [
+                "Protectores auditivos",
+                "Oídos",
+                "Entornos con maquinaria ruidosa (taladros, sierras)."
+              ],
+              [
+                "Cascos",
+                "Cabeza",
+                "Zonas de construcción o donde puedan caer objetos pesados."
+              ]
+            ],
+            "cabeceras": [
+              "Elemento",
+              "Zona Protegida",
+              "Situación de Uso"
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Señalización de Seguridad",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La señalización se divide universalmente por colores: Rojo (Prohibición/Fuego), Amarillo (Advertencia de Peligro), Azul (Obligación, como usar guantes) y Verde (Salvamento y rutas de evacuación). Conocer este lenguaje visual es vital antes de ingresar a cualquier taller.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Manejo de datos en Excel",
+      "descripcion": "Aprende a dominar las hojas de cálculo para organizar, analizar y visualizar información estadística.",
+      "portada": "imagenes/excel_decimo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Poder de los Datos",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En un mundo impulsado por la información (Big Data), saber utilizar Excel de manera avanzada es una de las habilidades más demandadas en el mercado laboral. Excel te permite ir más allá del cálculo simple; te permite descubrir historias ocultas dentro de los números.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Herramientas y Funciones Clave",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Habilidades a desarrollar",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Organización y Formato: Uso de tablas dinámicas, filtros avanzados y formato condicional para resaltar datos importantes.",
+              "Fórmulas y Funciones: Dominio de funciones lógicas (SI, Y, O), de búsqueda (BUSCARV) y matemáticas estadísticas avanzadas.",
+              "Creación de Gráficos: Representación visual adecuada de datos usando gráficos de barras (para comparar) y gráficos circulares (para ver proporciones)."
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Práctica: Crea una tabla con los gastos mensuales de tu casa y utiliza un gráfico circular para visualizar en qué rubro se va la mayor parte del dinero.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Interpretación de manuales y diagramas",
+      "descripcion": "El lenguaje técnico: cómo leer planos, instrucciones y esquemas de forma profesional.",
+      "portada": "imagenes/manuales_diagramas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Leyendo el Alfabeto Técnico",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Una de las competencias más críticas de un tecnólogo es la capacidad de interpretar manuales técnicos. Muchas veces, un equipo costoso se daña simplemente porque el usuario no leyó las instrucciones o no supo interpretar un esquema eléctrico o mecánico.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Comprensión de Símbolos Técnicos",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Los diagramas, sean electrónicos (esquemáticos), de flujo (programación) o arquitectónicos (planos), utilizan simbología estandarizada mundialmente. Por ejemplo, en electrónica, un rectángulo con líneas representa una resistencia; en un diagrama de flujo, un rombo representa una toma de decisión.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Pasos para leer un manual exitosamente",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Revisar el índice general para ubicar las secciones de advertencia y seguridad primero.",
+              "Identificar el glosario de símbolos para entender la leyenda del fabricante.",
+              "Seguir los diagramas de ensamblaje o mantenimiento paso a paso, sin saltar procesos."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Construcción de modelos, maquetas y prototipos",
+      "descripcion": "El proceso creativo de llevar las ideas del papel al plano tridimensional funcional.",
+      "portada": "imagenes/prototipos_maquetas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "De la Idea a lo Tangible",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La culminación del aprendizaje tecnológico se da cuando el estudiante es capaz de crear. Construir maquetas o prototipos no es una manualidad escolar básica; es ingeniería en miniatura. Implica escalar medidas, entender resistencias de materiales y prever cómo funcionará el producto final.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Diferencia entre Modelo, Maqueta y Prototipo",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Tipos de Representaciones",
+          "metadata": {
+            "filas": [
+              [
+                "Modelo",
+                "Representación teórica o matemática de un sistema.",
+                "Modelo estructural 3D en computadora."
+              ],
+              [
+                "Maqueta",
+                "Reproducción física a escala, enfocada en la estética y el volumen.",
+                "Maqueta de un puente escolar hecho en balso."
+              ],
+              [
+                "Prototipo",
+                "Versión física preliminar diseñada para ser probada y funcional.",
+                "Un circuito básico con LEDs y sensores que enciende de verdad."
+              ]
+            ],
+            "cabeceras": [
+              "Tipo",
+              "Definición",
+              "Ejemplo"
+            ]
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Reglas de Taller",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Uso adecuado de herramientas: cortar alejando la cuchilla del cuerpo.",
+              "Aplicación de normas de seguridad: uso de gafas y áreas ventiladas al pegar o soldar.",
+              "Trabajo creativo: iterar y mejorar el prototipo cada vez que falle."
+            ]
+          }
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Simulador de circuitos básicos: Conecta la batería al LED sin causar un cortocircuito.",
+          "metadata": {
+            "tipo_juego": "simulacion"
+          }
+        }
+      ]
+    }
+  ]
+}

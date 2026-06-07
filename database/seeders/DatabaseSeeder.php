@@ -29,6 +29,18 @@ class DatabaseSeeder extends Seeder
             GradosSeeder::class,
             MateriasSeeder::class,
             PeriodosSeeder::class,
+            TecnologiaNovenoP1Seeder::class,
+            TecnologiaNovenoP2Seeder::class,
+            TecnologiaNovenoP3Seeder::class,
+            TecnologiaNovenoP4Seeder::class,
+            TecnologiaDecimoP1Seeder::class,
+            TecnologiaDecimoP2Seeder::class,
+            TecnologiaDecimoP3Seeder::class,
+            TecnologiaDecimoP4Seeder::class,
+            TecnologiaOnceP1Seeder::class,
+            TecnologiaOnceP2Seeder::class,
+            TecnologiaOnceP3Seeder::class,
+            TecnologiaOnceP4Seeder::class,
         ]);
     }
 }

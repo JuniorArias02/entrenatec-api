@@ -1,0 +1,337 @@
+{
+  "grado": "Noveno",
+  "periodo": 3,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Solución de problemas con tecnología",
+  "temas": [
+    {
+      "titulo": "Cómo la tecnología ayuda a resolver problemas",
+      "descripcion": "Identificar el rol fundamental de la tecnología como herramienta para facilitar la vida humana.",
+      "portada": "imagenes/tecnologia_problemas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Tecnología como Herramienta",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Desde los albores de la humanidad, el ser humano se ha enfrentado a obstáculos: frío, hambre, distancia, enfermedades. La tecnología surgió exactamente como respuesta a estos obstáculos. Cada invento es, en su núcleo, una solución a un problema específico.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Método Tecnológico",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A diferencia del método científico, que busca comprender la naturaleza, el método tecnológico busca transformarla. Comienza con la identificación de una necesidad, sigue con el diseño de una solución, su construcción y, finalmente, la evaluación para saber si el problema se ha resuelto eficientemente.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Fases de resolución de problemas",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Identificación del problema (¿Qué necesitamos resolver?).",
+              "Exploración y diseño (Búsqueda de información y bocetos).",
+              "Planificación (Materiales y pasos a seguir).",
+              "Construcción (Ejecutar el plan).",
+              "Evaluación (¿Funciona? ¿Se puede mejorar?)."
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Identifica un problema en tu salón de clases y propón una solución tecnológica rápida.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Programación básica",
+      "descripcion": "El lenguaje que nos permite dar instrucciones a las máquinas para automatizar tareas.",
+      "portada": "imagenes/programacion_basica.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Hablando con las Máquinas",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Las computadoras son máquinas increíblemente rápidas pero que no tienen inteligencia propia; solo hacen exactamente lo que se les indica. La programación es el arte de escribir esas instrucciones en un idioma que la máquina pueda entender (un lenguaje de programación).",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Conceptos Fundamentales",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Términos Clave de Programación",
+          "metadata": {
+            "filas": [
+              [
+                "Algoritmo",
+                "Secuencia de pasos para resolver un problema.",
+                "Una receta de cocina."
+              ],
+              [
+                "Variable",
+                "Espacio en memoria para guardar un dato que puede cambiar.",
+                "Una caja donde guardas tu edad actual."
+              ],
+              [
+                "Bucle (Loop)",
+                "Repetir una acción varias veces hasta que se cumpla una condición.",
+                "Dar vueltas a la pista hasta que suene el silbato."
+              ],
+              [
+                "Condicional",
+                "Tomar una decisión basada en si algo es verdadero o falso.",
+                "Si llueve, llevo paraguas; si no, llevo gafas de sol."
+              ]
+            ],
+            "cabeceras": [
+              "Concepto",
+              "Definición",
+              "Ejemplo en la Vida Real"
+            ]
+          }
+        },
+        {
+          "tipo": "CODIGO",
+          "contenido": "Si (temperatura > 30) entonces\n   encender_ventilador()\nsino\n   apagar_ventilador()\nFin Si",
+          "metadata": {
+            "lenguaje": "pseudocodigo"
+          }
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Juego interactivo de ordenar secuencias lógicas",
+          "metadata": {
+            "dificultad": "facil"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Robótica y automatización",
+      "descripcion": "La integración de la mecánica, electrónica y programación para crear máquinas autónomas.",
+      "portada": "imagenes/robotica.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Máquinas que Piensan y Actúan",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La robótica es la rama de la tecnología que se dedica al diseño, construcción y operación de robots. Un robot es una máquina capaz de llevar a cabo una serie compleja de acciones automáticamente, especialmente programable por una computadora.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Partes de un Robot",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Componentes principales",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Sensores: Como los ojos o el tacto humano (detectan luz, distancia, temperatura).",
+              "Actuadores: Motores y piezas móviles (las 'manos' o 'piernas' del robot).",
+              "Controlador: El cerebro del robot, un microprocesador donde vive el código.",
+              "Fuente de Energía: Baterías que permiten que todo funcione."
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La automatización es el uso de estos sistemas (robots, software) para operar maquinaria o procesos industriales minimizando la intervención humana. Esto es vital en fábricas de autos, empaquetado de productos e incluso en la domótica (casas inteligentes).",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Diseño de soluciones tecnológicas",
+      "descripcion": "El paso a paso para pasar de una idea a un prototipo funcional.",
+      "portada": "imagenes/diseno_soluciones.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "De la Idea a la Realidad",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Diseñar no es solo dibujar o hacer que algo se vea bonito; es planificar de manera estructurada cómo funcionará algo. El Design Thinking (Pensamiento de Diseño) es una metodología muy usada hoy en día para crear soluciones tecnológicas centradas en el usuario.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Etapas del Diseño",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Proceso de Diseño",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Empatizar: Comprender profundamente a las personas que tienen el problema.",
+              "Definir: Articular claramente el problema a resolver.",
+              "Idear: Hacer una lluvia de ideas (Brainstorming) de posibles soluciones sin juzgar.",
+              "Prototipar: Crear una versión rápida, barata y sencilla de la idea (con cartón, papel o software básico).",
+              "Testear: Probar el prototipo con usuarios reales para recibir retroalimentación."
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Reto: Diseña un prototipo en papel de una aplicación móvil que ayude a reciclar en tu colegio.",
+          "metadata": {
+            "tipo_actividad": "reto"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Innovación y creatividad",
+      "descripcion": "Por qué pensar fuera de la caja es la habilidad más importante del futuro.",
+      "portada": "imagenes/innovacion.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Pensando Fuera de la Caja",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A menudo confundimos invención con innovación. Inventar es crear algo nuevo que no existía. Innovar es tomar algo (nuevo o viejo) y aplicarlo de una forma novedosa que genere valor real a las personas. Un iPhone no inventó la pantalla táctil ni la telefonía móvil, pero innovó al combinarlas de una forma fácil de usar.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Claves para ser creativo",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Hábitos de Innovadores",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Curiosidad constante: Preguntar el 'por qué' de las cosas todos los días.",
+              "No temer al fracaso: Cada error es simplemente información de cómo no hacerlo la próxima vez.",
+              "Combinación de ideas: Unir conceptos de disciplinas totalmente distintas (ej. biología y arquitectura)."
+            ]
+          }
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Test de pensamiento lateral",
+          "metadata": {
+            "dificultad": "intermedio"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Ejemplos de problemas cotidianos solucionados con tecnología",
+      "descripcion": "Casos de éxito reales donde la tecnología ha hecho del mundo un lugar más fácil para vivir.",
+      "portada": "imagenes/problemas_solucionados.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Tecnología en Acción",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A veces es difícil dimensionar el impacto de la tecnología hasta que miramos problemas muy específicos que se resolvieron brillantemente.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Problemas y Soluciones",
+          "metadata": {
+            "filas": [
+              [
+                "Perderse viajando o no saber cómo llegar a un lugar.",
+                "GPS y Google Maps",
+                "Rutas optimizadas y prevención de tráfico en tiempo real."
+              ],
+              [
+                "No poder comunicarse con alguien al otro lado del mundo sin pagar fortunas.",
+                "Internet y WhatsApp / Zoom",
+                "Videollamadas gratuitas instantáneas y trabajo remoto global."
+              ],
+              [
+                "Desperdicio de agua masivo en cultivos agrícolas.",
+                "Sistemas de riego automatizados con sensores de humedad.",
+                "Ahorro inmenso de agua y cosechas mucho más eficientes."
+              ],
+              [
+                "Dificultad de las personas ciegas para leer o interactuar.",
+                "Asistentes de voz (Siri/Alexa) y lectores de pantalla.",
+                "Inclusión digital e independencia total en sus hogares."
+              ]
+            ],
+            "cabeceras": [
+              "Problema del Pasado",
+              "Solución Tecnológica",
+              "Impacto Actual"
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Estos ejemplos demuestran que, sin importar si el problema es pequeño (llegar tarde a un sitio) o grande (inclusión social), siempre hay espacio para que una mente creativa y los conocimientos de programación, electrónica y diseño puedan proponer una solución tecnológica.",
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}

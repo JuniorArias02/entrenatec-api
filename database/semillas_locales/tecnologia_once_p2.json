@@ -1,0 +1,226 @@
+{
+  "grado": "Once",
+  "periodo": 2,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Apropiación y uso de la tecnología",
+  "temas": [
+    {
+      "titulo": "Apropiación y Uso Eficiente",
+      "descripcion": "Principios fundamentales para la selección y utilización segura de sistemas y herramientas tecnológicas.",
+      "portada": "imagenes/apropiacion_once_p2.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Competencia Básica",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Tengo en cuenta principios de funcionamiento y criterios de selección para la utilización eficiente y segura de artefactos, productos, servicios, procesos y sistemas tecnológicos de mi entorno.",
+          "metadata": {
+            "formato": "destacado"
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Procesamiento y Búsqueda de Información",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Para entender cómo usar una computadora, primero debemos entenderla como una gran procesadora de información. La utilización adecuada de herramientas informáticas no solo agiliza el trabajo diario, sino que potencia nuestra capacidad para comunicar ideas complejas de forma estructurada.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Anatomía del Computador: Hardware Interno",
+      "descripcion": "Identificación y función de los componentes vitales que hacen que una computadora cobre vida.",
+      "portada": "imagenes/hardware_interno.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Por Dentro de la Máquina",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Conocer las partes internas del computador nos permite hacer mejores compras tecnológicas y solucionar fallas sin depender siempre de terceros. Cada pieza es como el órgano de un cuerpo humano.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Componentes Principales",
+          "metadata": {
+            "filas": [
+              [
+                "Procesador (CPU)",
+                "Ejecuta los cálculos y controla las operaciones del sistema.",
+                "El cerebro."
+              ],
+              [
+                "Memoria RAM",
+                "Almacena los datos temporales de los programas en uso para acceso ultrarrápido.",
+                "La memoria a corto plazo."
+              ],
+              [
+                "Disco Duro (HDD/SSD)",
+                "Almacenamiento permanente de archivos y el sistema operativo.",
+                "La memoria a largo plazo / conocimiento general."
+              ],
+              [
+                "Fuente de Poder",
+                "Convierte la energía de la pared a voltajes que la PC puede usar.",
+                "El corazón / sistema circulatorio."
+              ],
+              [
+                "Tarjeta Madre (Motherboard)",
+                "Placa principal donde se conectan e interactúan todos los componentes.",
+                "El esqueleto y sistema nervioso."
+              ]
+            ],
+            "cabeceras": [
+              "Componente",
+              "Función Principal",
+              "Analogía Humana"
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Periféricos y Tarjetas de Expansión",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Mejorando las capacidades del PC",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Tarjeta de Video (GPU): Especializada en renderizar gráficos y modelos 3D.",
+              "Tarjetas de Red y Módem: Permiten conectar el equipo a internet o a una red de área local (LAN).",
+              "Tarjetas Multimedia: Mejoran la entrada/salida de audio avanzado.",
+              "BIOS: El firmware básico que despierta a la computadora antes de que arranque Windows o Linux.",
+              "Batería (CMOS y de Laptops): Mantiene la hora en la BIOS y da portabilidad a los equipos móviles."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Conceptos Generales sobre Electrónica",
+      "descripcion": "Los fundamentos físicos que permiten la existencia de la tecnología digital.",
+      "portada": "imagenes/electronica_basica.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Lenguaje de la Electricidad",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Los computadores no entienden de palabras ni de imágenes, solo entienden de pulsos eléctricos (unos y ceros). Por lo tanto, entender la electrónica básica es el primer paso para dominar el hardware.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Magnitudes Eléctricas Básicas",
+          "metadata": {
+            "filas": [
+              [
+                "Voltaje (Tensión)",
+                "Voltios (V)",
+                "La fuerza que empuja a los electrones por el cable."
+              ],
+              [
+                "Corriente (Intensidad)",
+                "Amperios (A)",
+                "La cantidad de electrones que pasan por un punto."
+              ],
+              [
+                "Resistencia",
+                "Ohmios (Ω)",
+                "La oposición o freno que encuentra la corriente al pasar."
+              ]
+            ],
+            "cabeceras": [
+              "Magnitud",
+              "Unidad de Medida",
+              "Concepto simple"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Laboratorio: Usa un multímetro para medir el voltaje de una batería normal y luego medir la continuidad en un cable de red.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Mantenimiento y Resolución de Fallas",
+      "descripcion": "Troubleshooting en la vida real: Diagnóstico y reparación de problemas comunes.",
+      "portada": "imagenes/mantenimiento_pc.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Técnico en Casa",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Muchas de las visitas a un técnico se podrían evitar con un poco de conocimiento básico sobre adaptadores, cables y signos vitales del computador.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Evidencias y Habilidades Adquiridas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Solución de problemas comunes",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Identificar el funcionamiento de cada componente interno al abrir un chasis.",
+              "El PC enciende pero no da video: Posible fallo en la memoria RAM (limpiar contactos) o cable suelto.",
+              "Solucionar problemas básicos relacionados con cables (HDMI, VGA, Ethernet) y adaptadores.",
+              "El equipo se apaga de repente: Posible sobrecalentamiento del procesador (revisar disipador y pasta térmica)."
+            ]
+          }
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Simulador de Ensamblaje: Arrastra y suelta las piezas internas del PC en el lugar correcto de la tarjeta madre.",
+          "metadata": {
+            "tipo_juego": "puzzle"
+          }
+        }
+      ]
+    }
+  ]
+}

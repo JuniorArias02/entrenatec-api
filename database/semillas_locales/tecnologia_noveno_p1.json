@@ -1,0 +1,450 @@
+{
+  "grado": "Noveno",
+  "periodo": 1,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Naturaleza y evolución de la tecnología",
+  "temas": [
+    {
+      "titulo": "¿Qué es la tecnología?",
+      "descripcion": "Conceptos básicos sobre la tecnología, su propósito y cómo resuelve problemas humanos a lo largo de la historia.",
+      "portada": "imagenes/que_es_tecnologia.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Definiendo la Tecnología",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A menudo, cuando escuchamos la palabra tecnología, nuestra mente viaja inmediatamente a computadoras, teléfonos inteligentes, inteligencia artificial o naves espaciales. Sin embargo, la tecnología es un concepto mucho más amplio y antiguo. Proviene de las palabras griegas tekne (que significa arte, oficio o destreza) y logos (que significa conocimiento o estudio). Por lo tanto, la tecnología es literalmente el estudio de la destreza o el conjunto de conocimientos técnicos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En su definición más pura, la tecnología es la aplicación coordinada de un conjunto de conocimientos (ciencia) y habilidades (técnica) con el fin de crear una solución (objeto o sistema tecnológico) que permita al ser humano satisfacer sus necesidades o resolver sus problemas. Un lápiz, una rueda o un vaso de cristal son tan tecnológicos como un microprocesador.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Propósito de la Tecnología",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología nace de la necesidad. A lo largo de la historia, el ser humano ha enfrentado retos como protegerse del clima, conseguir alimento, comunicarse a distancia o curar enfermedades. La tecnología es la respuesta creativa a estos retos. Su objetivo principal es mejorar la calidad de vida, optimizar procesos, reducir el esfuerzo físico y expandir las capacidades humanas más allá de nuestros límites biológicos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "No obstante, la tecnología no es intrínsecamente buena ni mala; es una herramienta. El impacto que tiene en la sociedad depende enteramente del uso que le demos y de la ética con la que se desarrolle.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Ideas clave de esta lección",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Definición clara y concisa de tecnología",
+              "Ejemplos de tecnología cotidiana (desde un lápiz hasta un smartphone)"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Historia y evolución de la tecnología",
+      "descripcion": "Un recorrido cronológico desde las herramientas de piedra hasta la era digital y la inteligencia artificial.",
+      "portada": "imagenes/historia_tecnologia.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Un Viaje a Través del Tiempo",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La historia de la tecnología es la historia de la humanidad. Desde nuestros ancestros homínidos, la capacidad de transformar el entorno ha sido nuestra mayor ventaja evolutiva.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "1. La Edad de Piedra y la Revolución Agrícola",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Hace millones de años, nuestros antepasados crearon las primeras herramientas tallando piedras para cortar carne o madera. El descubrimiento y dominio del fuego fue, quizás, el primer gran hito tecnológico, permitiendo cocinar alimentos, obtener calor y defenderse de depredadores. Más adelante, hace unos 10.000 años, la Revolución Agrícola transformó por completo a la humanidad: pasamos de ser nómadas cazadores-recolectores a asentarnos en aldeas, desarrollando tecnologías como el arado, sistemas de riego y la domesticación de animales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "2. La Edad de los Metales y las Antiguas Civilizaciones",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El descubrimiento de la metalurgia (cobre, bronce y luego hierro) permitió crear herramientas agrícolas más eficientes y armas más resistentes. Civilizaciones como la egipcia, mesopotámica, china y romana desarrollaron tecnologías monumentales: acueductos, la escritura, la rueda, la pólvora y técnicas avanzadas de construcción.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "3. La Revolución Industrial",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A finales del siglo XVIII, la tecnología dio un salto sin precedentes. La invención de la máquina de vapor en Inglaterra sustituyó la fuerza muscular (humana y animal) por la energía del carbón. Surgieron las grandes fábricas, los ferrocarriles y los barcos de vapor. El mundo se conectó más rápido y la producción de bienes se multiplicó exponencialmente, aunque también trajo consigo desafíos laborales y medioambientales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "4. La Era de la Información (Siglos XX y XXI)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El siglo XX trajo la electricidad a los hogares, la aviación, la exploración espacial y la medicina moderna (antibióticos, vacunas). Pero el cambio más radical vino con la invención del transistor y el microprocesador. Hoy vivimos en la Era Digital: el internet, los teléfonos inteligentes y la inteligencia artificial están redefiniendo cómo trabajamos, aprendemos y nos relacionamos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Línea del tiempo interactiva visualizando las 4 eras",
+          "metadata": {
+            "tipo_actividad": "interactiva"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Inventos que cambiaron el mundo",
+      "descripcion": "Exploración a fondo de los inventos clave que alteraron permanentemente el curso de la civilización.",
+      "portada": "imagenes/inventos.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Hitos de la Ingeniosidad Humana",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Existen miles de inventos, pero algunos han sido tan disruptivos que dividieron la historia en un 'antes' y un 'después'. Estos son los pilares sobre los que se sostiene el mundo moderno:",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Rueda (aprox. 3500 a.C.)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Originalmente utilizada en Mesopotamia no para el transporte, sino para la alfarería (el torno de alfarero). Cuando se adaptó a los carros, revolucionó el transporte terrestre, el comercio y la guerra. Sin la rueda, maquinarias complejas con engranajes (como los relojes o los motores) simplemente no existirían.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Imprenta de Gutenberg (1440)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Antes de Johannes Gutenberg, los libros se copiaban a mano, lo que los hacía raros y exclusivos para la élite. La imprenta de tipos móviles permitió la producción masiva de libros, democratizando el conocimiento, impulsando el Renacimiento, la Revolución Científica y la alfabetización mundial.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Máquina de Vapor (1712 - 1769)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Perfeccionada por James Watt, fue el corazón de la Revolución Industrial. Permitió bombear agua de las minas y mover telares gigantes. Al independizar a la industria de la energía del viento o de los ríos, las fábricas pudieron instalarse en cualquier lugar, dando origen a las grandes ciudades modernas.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Penicilina (1928)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Descubierta por accidente por Alexander Fleming, este primer antibiótico salvó millones de vidas al curar infecciones bacterianas que antes eran mortales. Transformó la medicina moderna y aumentó drásticamente la esperanza de vida mundial.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Internet y la World Wide Web (1969 - 1989)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Lo que comenzó como un proyecto militar estadounidense (ARPANET) para mantener las comunicaciones en caso de guerra nuclear, evolucionó gracias a Tim Berners-Lee en la World Wide Web. Internet ha colapsado las barreras geográficas, creando una aldea global instantánea y cambiando la economía, el entretenimiento y la educación para siempre.",
+          "metadata": {}
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Adivinar el inventor",
+          "metadata": {
+            "dificultad": "facil"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Diferencia entre ciencia, técnica y tecnología",
+      "descripcion": "Aclarando conceptos: la ciencia estudia para saber, la técnica es el saber hacer, y la tecnología aplica ambas para crear.",
+      "portada": "imagenes/ciencia_tecnica_tecnologia.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Desenredando Conceptos",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En el lenguaje cotidiano, solemos usar ciencia y tecnología como sinónimos, pero en realidad son disciplinas distintas aunque profundamente interconectadas. Para entender la tecnología, primero debemos diferenciarla de sus 'hermanas'.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Ciencia: El deseo de comprender",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La ciencia responde a la curiosidad humana por entender cómo funciona el universo. Su objetivo es el conocimiento por el conocimiento mismo. Utiliza el método científico (observación, hipótesis, experimentación y conclusión) para descubrir las leyes de la naturaleza. Ejemplo: Un biólogo estudiando cómo interactúan las células del sistema inmunológico con un virus.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Técnica: La habilidad de hacer",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La técnica es un procedimiento o conjunto de reglas que tienen como objetivo obtener un resultado determinado, ya sea en el arte, el deporte o la producción. Es el 'saber hacer' que se adquiere con la práctica y la repetición. Se puede tener técnica sin tener un conocimiento científico profundo. Ejemplo: Las técnicas milenarias para tejer lana o la técnica de un artesano para moldear el barro.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Tecnología: La aplicación para resolver",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología vincula a las dos anteriores. Toma el conocimiento teórico de la ciencia y los procedimientos prácticos de la técnica para diseñar, crear y construir artefactos o sistemas que resuelvan un problema o satisfagan una necesidad. Ejemplo: Tomar el conocimiento científico sobre virología y aplicar técnicas de biotecnología para fabricar en masa una vacuna.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El Círculo Virtuoso: Hoy en día, la relación es simbiótica. La ciencia proporciona los conocimientos para crear nuevas tecnologías, y estas nuevas tecnologías (como microscopios electrónicos o telescopios espaciales) permiten a la ciencia hacer nuevos descubrimientos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Comparación Ciencia vs Técnica vs Tecnología",
+          "metadata": {
+            "filas": [
+              [
+                "Saber por saber",
+                "Saber hacer",
+                "Hacer para resolver"
+              ],
+              [
+                "Descubre leyes",
+                "Aplica reglas",
+                "Crea artefactos"
+              ]
+            ],
+            "cabeceras": [
+              "Ciencia",
+              "Técnica",
+              "Tecnología"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Evolución de medios de comunicación y transporte",
+      "descripcion": "Cómo la humanidad logró acortar las distancias físicas e informativas, conectando al mundo entero.",
+      "portada": "imagenes/comunicacion_transporte.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Conectando el Mundo: Distancia y Tiempo",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Dos de las áreas donde la tecnología ha tenido el impacto más dramático y visible son el transporte de personas/mercancías y la transmisión de información.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Evolución del Transporte",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Durante miles de años, la velocidad máxima a la que un ser humano podía viajar era la velocidad de un caballo a galope. Con la invención de la máquina de vapor en el siglo XIX, el ferrocarril revolucionó los viajes terrestres y los barcos de vapor conquistaron los océanos, ignorando los vientos. A finales del siglo XIX y principios del XX, el motor de combustión interna dio lugar al automóvil, democratizando la movilidad personal.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El siglo XX nos dio alas con los hermanos Wright (1903) y, en menos de 70 años después de ese primer vuelo, la tecnología de cohetes nos llevó a pisar la Luna (1969). Hoy, experimentamos con trenes de levitación magnética, vehículos eléctricos autónomos y turismo espacial.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Evolución de la Comunicación",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Antiguamente, un mensaje tardaba semanas o meses en cruzar un océano, llevado físicamente en barco. La primera gran ruptura fue el Telégrafo Eléctrico (1837), que permitió que la información viajara más rápido que un mensajero físico por primera vez en la historia a través de código Morse. Luego vino el Teléfono (1876), permitiendo escuchar la voz a kilómetros de distancia.",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El siglo XX introdujo la radio y la televisión, medios masivos que unificaron culturas. Finalmente, la creación de redes de computadoras (Internet) y la telefonía móvil han culminado en los smartphones: hoy llevamos en nuestros bolsillos un dispositivo capaz de realizar videollamadas instantáneas con cualquier rincón del planeta, acceder a todo el conocimiento humano y grabar video en alta definición.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Impacto de la tecnología en la vida diaria",
+      "descripcion": "Un análisis crítico sobre las luces y sombras de vivir en una sociedad hipertecnológica.",
+      "portada": "imagenes/impacto_vida_diaria.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Luces y Sombras del Mundo Moderno",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología impregna cada segundo de nuestra existencia. Desde el despertador de nuestro celular hasta los sistemas que purifican el agua que bebemos. Pero este poder conlleva profundas responsabilidades y consecuencias, tanto positivas como negativas.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Impacto Positivo (Las Luces)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Beneficios clave",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Salud y Esperanza de Vida: Equipos médicos avanzados y medicamentos precisos.",
+              "Acceso a la Información: Conocimiento democrático vía internet.",
+              "Eficiencia y Comodidad: Tareas cotidianas automatizadas."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Impacto Negativo (Las Sombras)",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Desventajas y retos",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Medio Ambiente: Contaminación y acumulación de basura electrónica (e-waste).",
+              "Brecha Digital: Desigualdad en el acceso a la tecnología.",
+              "Salud Mental: Ansiedad, aislamiento y adicción a redes sociales.",
+              "Desplazamiento Laboral: La automatización reemplaza empleos rutinarios."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Una Reflexión Final",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología es como el fuego: un excelente sirviente, pero un pésimo amo. Como ciudadanos del siglo XXI, el reto no es frenar el avance tecnológico, sino aprender a dirigirlo con ética, empatía y responsabilidad ambiental, asegurándonos de que la tecnología sirva a la humanidad y no al revés.",
+          "metadata": {}
+        }
+      ]
+    }
+  ]
+}

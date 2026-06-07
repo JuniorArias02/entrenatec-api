@@ -1,0 +1,272 @@
+{
+  "grado": "Décimo",
+  "periodo": 1,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Naturaleza y evolución de la tecnología",
+  "temas": [
+    {
+      "titulo": "Evolución de la tecnología",
+      "descripcion": "Cómo ha evolucionado la tecnología a través del tiempo, su impacto en la sociedad y en diferentes épocas.",
+      "portada": "imagenes/evolucion_decimo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Ritmo de la Evolución Tecnológica",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A medida que avanzamos hacia niveles educativos superiores, la comprensión de la tecnología debe ir más allá de los inventos en sí. La evolución de la tecnología es la historia de cómo la humanidad ha moldeado su entorno y cómo, a su vez, las herramientas han moldeado nuestra mente, cultura y estructuras de poder a lo largo del tiempo.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Manifestaciones tecnológicas en diferentes épocas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Cada era histórica está definida por sus manifestaciones tecnológicas dominantes. La Antigüedad se caracterizó por la monumentalidad arquitectónica y la agricultura intensiva; la Edad Media por la mejora en técnicas metalúrgicas y los molinos; y la Era Moderna por la mecanización y el dominio de nuevas fuentes de energía (vapor, electricidad).",
+          "metadata": {}
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Impacto Tecnológico Sectorial",
+          "metadata": {
+            "filas": [
+              [
+                "Comunicación",
+                "Internet / Fibra Óptica",
+                "Interconexión global y democratización de la información."
+              ],
+              [
+                "Transporte",
+                "Motor a reacción / Trenes Maglev",
+                "Reducción de fronteras geográficas y globalización de mercados."
+              ],
+              [
+                "Educación",
+                "Plataformas e-Learning / IA",
+                "Aprendizaje ubicuo (en cualquier lugar y momento)."
+              ]
+            ],
+            "cabeceras": [
+              "Sector",
+              "Tecnología Transformadora",
+              "Impacto Social"
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Influencia en la sociedad actual",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Hoy en día, vivimos en la Cuarta Revolución Industrial. La convergencia de lo digital, físico y biológico influye directamente en nuestras decisiones, la economía global y hasta la estructura psicológica de las nuevas generaciones. Comprender esto es el primer paso para ser un ciudadano crítico.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Herramientas ofimáticas — Microsoft Word",
+      "descripcion": "Uso avanzado del procesador de texto para la creación de documentos profesionales.",
+      "portada": "imagenes/herramientas_ofimaticas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Dominando Microsoft Word",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Un estudiante de décimo grado necesita proyectar profesionalismo en sus informes, ensayos y proyectos. Microsoft Word es mucho más que una hoja en blanco virtual; es una herramienta ofimática potente que permite estructurar y diseñar documentos con altos estándares académicos y laborales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Diseño y Estructura Avanzada",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Funciones Clave a Dominar",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Diseño de página: Ajuste milimétrico de márgenes y orientación (vertical/horizontal) según las normas APA o ICONTEC.",
+              "Estética documental: Uso adecuado de marcos de página, fondos y marcas de agua institucionales.",
+              "Estructuración: Configuración de encabezados y pies de página, numeración automática y saltos de sección."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Combinación de Correspondencia",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Una de las funciones más poderosas y menos conocidas. Permite vincular un documento base (como una carta o un diploma) a una base de datos (como Excel), generando automáticamente cientos de documentos personalizados en segundos. Es una habilidad invaluable para el trabajo de oficina.",
+          "metadata": {}
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Reto: Crea una carta de invitación para la graduación y usa la Combinación de Correspondencia para generar invitaciones personalizadas para 10 de tus compañeros.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Transferencia tecnológica",
+      "descripcion": "El proceso mediante el cual las innovaciones fluyen desde los laboratorios hasta la sociedad.",
+      "portada": "imagenes/transferencia_tecnologica.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "De la Idea a la Acción Comunitaria",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La transferencia tecnológica es el proceso de transferir descubrimientos científicos, conocimientos y tecnologías de sus creadores (como universidades, centros de investigación o países desarrollados) a usuarios públicos o privados para que se conviertan en nuevos productos y servicios que resuelvan problemas reales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Casos de Éxito y Fracaso",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Ejemplos de Transferencia",
+          "metadata": {
+            "filas": [
+              [
+                "Exitosa",
+                "Tecnología de filtrado de agua de la NASA adaptada a comunidades sin agua potable.",
+                "Reducción de enfermedades gastrointestinales."
+              ],
+              [
+                "No Exitosa",
+                "Tractores importados a zonas agrícolas sin capacitación ni repuestos locales.",
+                "Las máquinas se dañaron y quedaron como chatarra inútil."
+              ]
+            ],
+            "cabeceras": [
+              "Tipo de Transferencia",
+              "Ejemplo",
+              "Resultado"
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Aplicaciones para Resolver Problemas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Innovación en la Empresa y Sociedad",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Uso de energías renovables (paneles solares transferidos a zonas rurales).",
+              "Automatización industrial para mejorar la seguridad de los trabajadores.",
+              "Aplicaciones tecnológicas en salud (telemedicina) y educación (tablets para escuelas)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Relación entre tecnología, ciencia y matemáticas",
+      "descripcion": "Cómo el trabajo interdisciplinario es el verdadero motor del progreso.",
+      "portada": "imagenes/ciencia_matematicas_tec.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Triángulo del Conocimiento",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología moderna rara vez nace de un inventor aislado trabajando en un garaje. Es el resultado de la sinergia profunda entre la ciencia (que descubre), las matemáticas (que cuantifican y modelan) y la tecnología (que aplica).",
+          "metadata": {}
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La famosa frase lo resume a la perfección: 'La evolución tecnológica nace de la unión entre ciencia, creatividad e innovación para solucionar las necesidades de la sociedad.'",
+          "metadata": {
+            "formato": "cita"
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Papel Fundamental de las Matemáticas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "A menudo se piensa que las matemáticas son solo números en un papel. Sin embargo, son el lenguaje universal del universo. Sin matemáticas no habría algoritmos; sin algoritmos no habría programación; y sin programación no existiría el internet, los videojuegos ni los satélites.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Avances Interdisciplinarios",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Robótica: Combina la física (mecánica), la electrónica y la programación basada en cálculo diferencial.",
+              "Inteligencia Artificial: Basada completamente en probabilidad, álgebra lineal y estadística matemática pura.",
+              "Ingeniería Civil: Aplicación de la física de materiales y geometría para crear puentes y rascacielos seguros."
+            ]
+          }
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Test de conocimientos cruzados",
+          "metadata": {
+            "dificultad": "dificil"
+          }
+        }
+      ]
+    }
+  ]
+}

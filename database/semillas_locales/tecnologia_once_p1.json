@@ -1,0 +1,189 @@
+{
+  "grado": "Once",
+  "periodo": 1,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Naturaleza y evolución de la tecnología",
+  "temas": [
+    {
+      "titulo": "Innovación y Transferencia Tecnológica",
+      "descripcion": "Análisis profundo de cómo la investigación y la experimentación resuelven problemas reales.",
+      "portada": "imagenes/innovacion_once.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Competencia Básica",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La innovación, investigación, desarrollo y experimentación guiados por objetivos producen avances tecnológicos. Identifico y analizo ejemplos exitosos y no exitosos de la transferencia tecnológica en la solución de problemas y necesidades.",
+          "metadata": {
+            "formato": "destacado"
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "La Responsabilidad del Futuro Profesional",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "En grado once, estás a punto de culminar tu educación media. La tecnología deja de ser solo una herramienta de consumo y se convierte en un medio para crear soluciones. La transferencia tecnológica (llevar un invento del laboratorio a la sociedad) es lo que define si una innovación cambia el mundo o se queda en el olvido.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Desarrollo Web Intermedio: Estructuras y Multimedia",
+      "descripcion": "Dominio de etiquetas para organizar contenido avanzado y visualizar datos en la web.",
+      "portada": "imagenes/html_intermedio.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Estructurando Datos en HTML",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Toda página web moderna necesita presentar datos de forma legible. Para esto, HTML proporciona herramientas específicas: listas para agrupaciones y tablas para datos bidimensionales.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Tipos de Listas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Aplicación de listas en HTML",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Listas Ordenadas (<ol>): Ideales para rankings o pasos secuenciales.",
+              "Listas con Viñetas o Desordenadas (<ul>): Perfectas para menús de navegación.",
+              "Listas de Definición (<dl>): Se usan para crear diccionarios o glosarios (utilizan <dt> para el término y <dd> para la definición)."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Tablas e Imágenes",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "CODIGO",
+          "contenido": "<table border=\"1\">\n  <tr>\n    <th>Nombre</th>\n    <th>Edad</th>\n  </tr>\n  <tr>\n    <td>Juan</td>\n    <td>16</td>\n  </tr>\n</table>\n\n<img src=\"logo.png\" alt=\"Logo del colegio\" width=\"200\">",
+          "metadata": {
+            "lenguaje": "html"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Las tablas (<table>) se dividen en filas (<tr>) y celdas de datos (<td>) o encabezados (<th>). Por su parte, la etiqueta <img> es fundamental para hacer la web visualmente atractiva, recordando siempre usar el atributo 'alt' para accesibilidad.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Navegación e Interactividad: Enlaces y Formularios",
+      "descripcion": "Conectando la web y recolectando información de los usuarios.",
+      "portada": "imagenes/formularios_enlaces.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "La Magia del Hipertexto",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Lo que hace que la web sea una 'red' (web) son los enlaces. Sin ellos, las páginas estarían aisladas. La etiqueta <a> (Anchor) es la responsable de esta magia.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Tipos de Enlaces",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Enlaces a páginas remotas: <a href=\"https://google.com\">Ir a Google</a>.",
+              "Enlaces locales: Hacia otras páginas de tu propio sitio (ej. href=\"contacto.html\").",
+              "Enlaces ancla (dentro de la página): Te llevan a una sección específica del mismo documento (útil para índices)."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Formularios: Escuchando al Usuario",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Un formulario (<form>) convierte una página estática en una aplicación interactiva. Permite recoger textos, contraseñas, opciones múltiples y archivos.",
+          "metadata": {}
+        },
+        {
+          "tipo": "CODIGO",
+          "contenido": "<form action=\"/enviar\" method=\"post\">\n  <label>Nombre:</label>\n  <input type=\"text\" name=\"nombre\">\n  \n  <label>Contraseña:</label>\n  <input type=\"password\" name=\"clave\">\n  \n  <button type=\"submit\">Enviar</button>\n</form>",
+          "metadata": {
+            "lenguaje": "html"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Evidencias y Proyecto Final",
+      "descripcion": "Demostración de los aprendizajes adquiridos a lo largo del periodo.",
+      "portada": "imagenes/proyecto_once.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Evaluación del Periodo",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Evidencias de Aprendizaje Esperadas",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Entrega de actividades asignadas en el tiempo acordado.",
+              "Demuestra interés por superar sus dificultades técnicas en el código.",
+              "Aplica correctamente etiquetas, tablas, imágenes y formularios en los laboratorios de clase."
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Proyecto Final: Diseña una página web completamente funcional que funcione como un 'Curriculum Vitae' digital. Debe incluir una foto tuya (<img>), un resumen de tus habilidades en listas (<ul>), una tabla con tu historial académico (<table>) y un formulario básico de contacto (<form>).",
+          "metadata": {
+            "tipo_actividad": "proyecto"
+          }
+        }
+      ]
+    }
+  ]
+}

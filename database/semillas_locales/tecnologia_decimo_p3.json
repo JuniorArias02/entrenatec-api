@@ -1,0 +1,326 @@
+{
+  "grado": "Décimo",
+  "periodo": 3,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Solución de problemas con tecnología",
+  "temas": [
+    {
+      "titulo": "Solución de problemas tecnológicos",
+      "descripcion": "Desarrollo de habilidades para identificar y resolver problemas reales usando la tecnología bajo condiciones y restricciones específicas.",
+      "portada": "imagenes/solucion_problemas_decimo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Ingeniería en Acción",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Resolver problemas tecnológicos en grado décimo requiere un pensamiento crítico estructurado. Ya no basta con decir 'hagamos una app'; debemos entender quiénes son los usuarios, con qué presupuesto contamos, qué herramientas tenemos y cuáles son las limitaciones técnicas.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Proceso Formal",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Pasos para solucionar un problema tecnológico",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Análisis de necesidades y especificaciones (Definir el problema exacto).",
+              "Identificación de restricciones (Dinero, tiempo, leyes físicas, materiales).",
+              "Lluvia de ideas y evaluación de alternativas de solución.",
+              "Selección de la propuesta más viable.",
+              "Desarrollo (Creatividad e innovación en la ejecución)."
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "“La tecnología y la programación permiten crear soluciones innovadoras para resolver problemas de la vida cotidiana.”",
+          "metadata": {
+            "formato": "cita"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Introducción al lenguaje HTML",
+      "descripcion": "Conceptos, estructura e importancia del lenguaje base que da vida a toda la World Wide Web.",
+      "portada": "imagenes/html_introduccion.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Esqueleto de Internet",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "HTML significa HyperText Markup Language (Lenguaje de Marcado de Hipertexto). No es un lenguaje de programación, sino un lenguaje de marcado que usamos para estructurar y dar significado al contenido de nuestras páginas web. Todo lo que ves en internet, desde Google hasta Instagram, tiene HTML en su núcleo.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Estructura Básica y Etiquetas",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Etiquetas Esenciales",
+          "metadata": {
+            "filas": [
+              [
+                "<html>",
+                "La raíz del documento",
+                "Envuelve absolutamente todo el código."
+              ],
+              [
+                "<head>",
+                "La cabeza",
+                "Contiene metadata, título de la pestaña y enlaces a estilos. No es visible en la página."
+              ],
+              [
+                "<body>",
+                "El cuerpo",
+                "Todo el contenido visual que ve el usuario (textos, imágenes, enlaces)."
+              ],
+              [
+                "<h1> a <h6>",
+                "Encabezados",
+                "Definen títulos y subtítulos por jerarquía de importancia."
+              ],
+              [
+                "<p>",
+                "Párrafo",
+                "Bloques de texto normal."
+              ],
+              [
+                "<img>",
+                "Imagen",
+                "Inserta imágenes en la web (requiere el atributo 'src')."
+              ],
+              [
+                "<a>",
+                "Ancla / Enlace",
+                "Permite hacer clic para navegar a otra página (requiere 'href')."
+              ]
+            ],
+            "cabeceras": [
+              "Etiqueta",
+              "Descripción",
+              "Uso Principal"
+            ]
+          }
+        },
+        {
+          "tipo": "CODIGO",
+          "contenido": "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Mi Primera Web</title>\n  </head>\n  <body>\n    <h1>Hola Mundo</h1>\n    <p>Esta es mi primera página usando HTML puro.</p>\n  </body>\n</html>",
+          "metadata": {
+            "lenguaje": "html"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Uso de la tecnología en la creación de páginas web",
+      "descripcion": "Las herramientas modernas, el diseño web básico y su impacto educativo y comercial en la actualidad.",
+      "portada": "imagenes/creacion_web.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Arquitectos Digitales",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Crear una página web ya no es un lujo, es una necesidad comercial y educativa. Dominar el diseño y desarrollo web básico te otorga el poder de publicar tus proyectos escolares, vender productos o dar voz a tu comunidad de forma global.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Herramientas de Desarrollo",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Para escribir código HTML no necesitas software costoso. Un simple 'Bloc de notas' es suficiente, aunque los desarrolladores usan Editores de Código (como Visual Studio Code) que colorean el código para evitar errores. Además, los Navegadores Web (Chrome, Firefox) son las herramientas encargadas de 'traducir' ese código y mostrarlo de forma bonita.",
+          "metadata": {}
+        },
+        {
+          "tipo": "GALERIA",
+          "contenido": "Del Código al Diseño Visual",
+          "metadata": {
+            "imagenes": [
+              "imagenes/codigo_fuente.jpg",
+              "imagenes/pagina_renderizada.jpg"
+            ]
+          }
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Abre un Bloc de notas, escribe una estructura básica de HTML sobre tu hobby favorito y guárdalo como 'mi_hobby.html'. ¡Ábrelo con Chrome!",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Reconocimiento y manejo del lenguaje HTML",
+      "descripcion": "Aplicación práctica: inserción de multimedia, listas, tablas y organización avanzada de contenidos.",
+      "portada": "imagenes/manejo_html.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Estructurando Contenido Complejo",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Una vez entendida la estructura básica (html, head, body), es momento de enriquecer nuestra página web insertando multimedia y organizando datos tabulares.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Listas y Atributos",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Elementos de organización web",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Listas Desordenadas (<ul> y <li>): Ideales para menús de navegación o características con viñetas.",
+              "Listas Ordenadas (<ol> y <li>): Utilizadas para recetas, manuales o rankings numéricos.",
+              "Atributos HTML: Proveen información adicional a las etiquetas. Por ejemplo, en <img src=\"foto.jpg\" alt=\"Mi perro\">, 'src' y 'alt' son los atributos."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Arte de Visualizar Páginas Web",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La edición se realiza en el editor de texto, y la visualización ocurre en el navegador. Un desarrollador web habilidoso siempre trabaja con ambas ventanas abiertas, guardando y recargando la página (F5) para ver los cambios instantáneamente.",
+          "metadata": {}
+        },
+        {
+          "tipo": "QUIZ",
+          "contenido": "Adivina la etiqueta HTML faltante",
+          "metadata": {
+            "dificultad": "intermedio"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Fallas en sistemas tecnológicos",
+      "descripcion": "Diagnóstico, formulación de hipótesis y mantenimiento preventivo ante errores técnicos y de software.",
+      "portada": "imagenes/fallas_tecnologicas.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Cuando las Cosas Salen Mal",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Todo sistema tecnológico, por avanzado que sea, es susceptible a fallar. Entrar en pánico no soluciona nada. El verdadero tecnólogo desarrolla una mentalidad de 'Troubleshooting' (resolución de problemas).",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "El Método Diagnóstico",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Pasos para enfrentar una falla",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Descripción del Problema: ¿Qué está fallando exactamente? (Ej. La página HTML se ve desordenada).",
+              "Formulación de Hipótesis: ¿Por qué pasó? (Ej. Olvidé cerrar una etiqueta </div>).",
+              "Prueba y Solución: Revisar el código línea por línea y arreglar el error.",
+              "Mantenimiento Preventivo: ¿Cómo evito que pase de nuevo? (Ej. Identar el código correctamente o usar un editor automático)."
+            ]
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Errores Comunes y Soluciones",
+          "metadata": {
+            "filas": [
+              [
+                "Problema de conexión a Internet.",
+                "Cable suelto o router reiniciándose.",
+                "Verificar conexiones físicas y luces del modem."
+              ],
+              [
+                "La imagen en HTML aparece rota.",
+                "Ruta del atributo 'src' incorrecta o imagen borrada.",
+                "Verificar que la imagen exista en la carpeta correcta y sin errores tipográficos."
+              ],
+              [
+                "El PC está extremadamente lento.",
+                "Muchos programas en segundo plano o disco lleno.",
+                "Cerrar procesos innecesarios y liberar espacio de almacenamiento."
+              ]
+            ],
+            "cabeceras": [
+              "Falla / Error",
+              "Posible Causa",
+              "Solución"
+            ]
+          }
+        },
+        {
+          "tipo": "MINIJUEGO",
+          "contenido": "Encuentra el error en el código fuente HTML.",
+          "metadata": {
+            "tipo_juego": "debugging"
+          }
+        }
+      ]
+    }
+  ]
+}

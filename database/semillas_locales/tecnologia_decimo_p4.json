@@ -1,0 +1,221 @@
+{
+  "grado": "Décimo",
+  "periodo": 4,
+  "materia": "Tecnología e Informática",
+  "titulo_general": "Tecnología y sociedad",
+  "temas": [
+    {
+      "titulo": "Tecnología y sociedad",
+      "descripcion": "Análisis profundo de la simbiosis entre los avances técnicos y los cambios en la vida cotidiana de las personas.",
+      "portada": "imagenes/tec_sociedad_decimo.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Un Espejo de Quiénes Somos",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La tecnología no es solo un conjunto de aparatos; es el motor que transforma radicalmente la forma en que las personas se comunican, trabajan y viven. Las sociedades moldean la tecnología para cubrir sus necesidades, pero al mismo tiempo, la tecnología moldea los valores y comportamientos de la sociedad.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Cambios y Consecuencias",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "El desarrollo tecnológico trae consigo beneficios innegables, como la cura de enfermedades o la interconexión global. Sin embargo, también genera riesgos profundos: aislamiento social, pérdida de empleos tradicionales por la automatización y dependencia tecnológica.",
+          "metadata": {}
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Reflexión: Haz una lista de tres cosas que hacían tus abuelos y que hoy se hacen de forma totalmente diferente gracias a la tecnología.",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "“La tecnología debe desarrollarse de manera ética y responsable para beneficiar a la sociedad y proteger el medio ambiente.”",
+          "metadata": {
+            "formato": "cita"
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Implicaciones éticas, sociales y ambientales",
+      "descripcion": "El debate moral detrás de cada gran avance y nuestra responsabilidad con el planeta.",
+      "portada": "imagenes/etica_ambiental.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "El Precio del Progreso",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Toda innovación tiene un costo. La ética tecnológica (tecnoética) nos obliga a preguntarnos si lo que estamos creando es justo y seguro para todos. Ser un ciudadano digital responsable no solo significa no hacer ciberacoso; significa entender el impacto de nuestras acciones en internet.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Impacto Ambiental y E-Waste",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "La contaminación tecnológica es una bomba de tiempo. Cada año se desechan millones de toneladas de basura electrónica (celulares, baterías, cables) que liberan metales pesados en la tierra y el agua si no se reciclan adecuadamente.",
+          "metadata": {}
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Acciones de Responsabilidad Digital",
+          "metadata": {
+            "ordenada": false,
+            "elementos": [
+              "Reciclaje de dispositivos electrónicos en puntos especializados (nunca en la basura común).",
+              "Protección de la información personal frente a corporaciones y algoritmos.",
+              "Uso crítico de las redes sociales para no caer en la polarización y las 'Fake News'."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "titulo": "Evaluación de procesos productivos y sistemas tecnológicos",
+      "descripcion": "Auditoría de cómo se fabrican las cosas y su efecto dominó en las comunidades.",
+      "portada": "imagenes/procesos_productivos.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Detrás de la Fábrica",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Para que un teléfono inteligente llegue a tus manos, debe pasar por un inmenso proceso productivo: extracción de minerales en África, ensamblaje en Asia y transporte global. Evaluar este sistema significa analizar qué impacto tiene cada fase.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Tecnología Sostenible",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TABLA",
+          "contenido": "Evaluación de Impactos",
+          "metadata": {
+            "filas": [
+              [
+                "Extracción de materia prima",
+                "Deforestación y explotación laboral.",
+                "Uso de materiales reciclados y comercio justo."
+              ],
+              [
+                "Manufactura",
+                "Emisión masiva de gases de invernadero.",
+                "Fábricas impulsadas por energía 100% solar o eólica."
+              ],
+              [
+                "Fin de vida útil",
+                "Acumulación en vertederos (e-waste).",
+                "Economía circular y diseño modular (fácil de reparar)."
+              ]
+            ],
+            "cabeceras": [
+              "Fase del Proceso",
+              "Impacto Negativo Potencial",
+              "Alternativa Sostenible"
+            ]
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Analizar cómo los avances tecnológicos afectan a la sociedad y al entorno natural es la única forma de exigir a las empresas que diseñen productos bajo un modelo de sostenibilidad ecológica.",
+          "metadata": {}
+        }
+      ]
+    },
+    {
+      "titulo": "Microsoft Office Publisher",
+      "descripcion": "Dominio de la herramienta de maquetación para la creación de diseños profesionales y publicidad.",
+      "portada": "imagenes/publisher_basico.jpg",
+      "bloques": [
+        {
+          "tipo": "TITULO",
+          "contenido": "Maquetación y Diseño Editorial",
+          "metadata": {
+            "nivel": "h2",
+            "color": "#111827"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Aunque Word es excelente para textos y Excel para números, Microsoft Publisher es el rey ofimático para el diseño de publicaciones impresas o digitales. Publisher ayuda a crear diseños organizados y creativos sin necesidad de ser un diseñador gráfico experto.",
+          "metadata": {}
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Navegación y Herramientas Clave",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "LISTA",
+          "contenido": "Uso de pestañas básicas",
+          "metadata": {
+            "ordenada": true,
+            "elementos": [
+              "Archivo: Para guardar, exportar en PDF o preparar para imprenta.",
+              "Edición y Ver: Para configurar líneas guía, márgenes de sangría y reglas de medición.",
+              "Insertar: La herramienta más importante, permite colocar cuadros de texto, formas, imágenes y bordes decorativos."
+            ]
+          }
+        },
+        {
+          "tipo": "SUBTITULO",
+          "contenido": "Proyectos Visuales",
+          "metadata": {
+            "nivel": "h3",
+            "color": "#374151"
+          }
+        },
+        {
+          "tipo": "TEXTO",
+          "contenido": "Con Publisher se pueden diseñar folletos (trípticos y dípticos) ideales para campañas escolares, tarjetas de presentación profesionales, diplomas, y afiches publicitarios de alta resolución.",
+          "metadata": {}
+        },
+        {
+          "tipo": "ACTIVIDAD",
+          "contenido": "Reto de Diseño: Utiliza Publisher para crear un afiche o tríptico (folleto) sobre la importancia del reciclaje de basura electrónica (E-Waste).",
+          "metadata": {
+            "tipo_actividad": "practica"
+          }
+        }
+      ]
+    }
+  ]
+}

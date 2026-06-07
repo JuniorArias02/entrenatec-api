@@ -41,6 +41,7 @@ Route::middleware('auth.escritura')->group(function () {
 
     // Rutas de Archivos
     Route::post('archivos', [App\Presentacion\Controladores\ArchivoControlador::class, 'subir']);
+    Route::post('archivos/galeria', [App\Presentacion\Controladores\ArchivoControlador::class, 'subirGaleria']);
 
     // Rutas de Usuarios (Gestión Admin)
     Route::get('usuarios', [App\Presentacion\Controladores\UsuarioControlador::class, 'obtenerTodos']);
