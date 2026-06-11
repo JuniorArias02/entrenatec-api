@@ -7,7 +7,7 @@
     {
       "titulo": "Competencias y Estándares de Solución",
       "descripcion": "El marco metodológico para enfrentar problemas y fallas en sistemas tecnológicos.",
-      "portada": "imagenes/competencias_once_p3.jpg",
+      "portada": "default/imagen_tema_default23.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default4.jpg"
           }
         },
         {
@@ -34,7 +41,7 @@
     {
       "titulo": "Optimización e Innovación",
       "descripcion": "Cómo llevar una solución funcional al siguiente nivel de eficiencia.",
-      "portada": "imagenes/optimizacion_innovacion.jpg",
+      "portada": "default/imagen_tema_default8.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -42,6 +49,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default20.jpg"
           }
         },
         {
@@ -74,7 +88,7 @@
     {
       "titulo": "Método de Prueba y Descarte",
       "descripcion": "El arte del diagnóstico técnico sistemático.",
-      "portada": "imagenes/prueba_descarte.jpg",
+      "portada": "default/imagen_tema_default1.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -82,6 +96,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default21.jpg"
           }
         },
         {
@@ -134,7 +155,7 @@
     {
       "titulo": "Diseño Centrado en lo Humano",
       "descripcion": "Antropometría, ergonomía y responsabilidad integral en el diseño.",
-      "portada": "imagenes/diseno_humano.jpg",
+      "portada": "default/imagen_tema_default5.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -142,6 +163,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default24.jpg"
           }
         },
         {

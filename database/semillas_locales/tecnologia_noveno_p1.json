@@ -7,7 +7,7 @@
     {
       "titulo": "¿Qué es la tecnología?",
       "descripcion": "Conceptos básicos sobre la tecnología, su propósito y cómo resuelve problemas humanos a lo largo de la historia.",
-      "portada": "imagenes/que_es_tecnologia.jpg",
+      "portada": "default/imagen_tema_default22.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default6.jpg"
           }
         },
         {
@@ -61,7 +68,7 @@
     {
       "titulo": "Historia y evolución de la tecnología",
       "descripcion": "Un recorrido cronológico desde las herramientas de piedra hasta la era digital y la inteligencia artificial.",
-      "portada": "imagenes/historia_tecnologia.jpg",
+      "portada": "default/imagen_tema_default18.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -69,6 +76,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default18.jpg"
           }
         },
         {
@@ -140,7 +154,7 @@
     {
       "titulo": "Inventos que cambiaron el mundo",
       "descripcion": "Exploración a fondo de los inventos clave que alteraron permanentemente el curso de la civilización.",
-      "portada": "imagenes/inventos.jpg",
+      "portada": "default/imagen_tema_default22.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -148,6 +162,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default16.jpg"
           }
         },
         {
@@ -232,7 +253,7 @@
     {
       "titulo": "Diferencia entre ciencia, técnica y tecnología",
       "descripcion": "Aclarando conceptos: la ciencia estudia para saber, la técnica es el saber hacer, y la tecnología aplica ambas para crear.",
-      "portada": "imagenes/ciencia_tecnica_tecnologia.jpg",
+      "portada": "default/imagen_tema_default2.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -240,6 +261,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default24.jpg"
           }
         },
         {
@@ -319,7 +347,7 @@
     {
       "titulo": "Evolución de medios de comunicación y transporte",
       "descripcion": "Cómo la humanidad logró acortar las distancias físicas e informativas, conectando al mundo entero.",
-      "portada": "imagenes/comunicacion_transporte.jpg",
+      "portada": "default/imagen_tema_default5.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -327,6 +355,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default23.jpg"
           }
         },
         {
@@ -375,7 +410,7 @@
     {
       "titulo": "Impacto de la tecnología en la vida diaria",
       "descripcion": "Un análisis crítico sobre las luces y sombras de vivir en una sociedad hipertecnológica.",
-      "portada": "imagenes/impacto_vida_diaria.jpg",
+      "portada": "default/imagen_tema_default20.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -383,6 +418,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default19.jpg"
           }
         },
         {

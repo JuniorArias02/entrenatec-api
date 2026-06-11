@@ -7,7 +7,7 @@
     {
       "titulo": "Uso eficiente y seguro de la tecnología",
       "descripcion": "Cómo utilizar la tecnología de manera segura, responsable y eficiente en diferentes espacios.",
-      "portada": "imagenes/uso_seguro_decimo.jpg",
+      "portada": "default/imagen_tema_default4.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default16.jpg"
           }
         },
         {
@@ -54,7 +61,7 @@
     {
       "titulo": "Normas de seguridad industrial",
       "descripcion": "Fundamentos y protocolos para prevenir accidentes en talleres y entornos tecnológicos.",
-      "portada": "imagenes/seguridad_industrial.jpg",
+      "portada": "default/imagen_tema_default16.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -62,6 +69,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default14.jpg"
           }
         },
         {
@@ -128,7 +142,7 @@
     {
       "titulo": "Manejo de datos en Excel",
       "descripcion": "Aprende a dominar las hojas de cálculo para organizar, analizar y visualizar información estadística.",
-      "portada": "imagenes/excel_decimo.jpg",
+      "portada": "default/imagen_tema_default7.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -136,6 +150,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default3.jpg"
           }
         },
         {
@@ -175,7 +196,7 @@
     {
       "titulo": "Interpretación de manuales y diagramas",
       "descripcion": "El lenguaje técnico: cómo leer planos, instrucciones y esquemas de forma profesional.",
-      "portada": "imagenes/manuales_diagramas.jpg",
+      "portada": "default/imagen_tema_default1.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -183,6 +204,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default24.jpg"
           }
         },
         {
@@ -220,7 +248,7 @@
     {
       "titulo": "Construcción de modelos, maquetas y prototipos",
       "descripcion": "El proceso creativo de llevar las ideas del papel al plano tridimensional funcional.",
-      "portada": "imagenes/prototipos_maquetas.jpg",
+      "portada": "default/imagen_tema_default12.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -228,6 +256,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default20.jpg"
           }
         },
         {

@@ -7,7 +7,7 @@
     {
       "titulo": "Tecnología y sociedad",
       "descripcion": "Análisis profundo de la simbiosis entre los avances técnicos y los cambios en la vida cotidiana de las personas.",
-      "portada": "imagenes/tec_sociedad_decimo.jpg",
+      "portada": "default/imagen_tema_default11.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default4.jpg"
           }
         },
         {
@@ -54,7 +61,7 @@
     {
       "titulo": "Implicaciones éticas, sociales y ambientales",
       "descripcion": "El debate moral detrás de cada gran avance y nuestra responsabilidad con el planeta.",
-      "portada": "imagenes/etica_ambiental.jpg",
+      "portada": "default/imagen_tema_default1.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -62,6 +69,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default7.jpg"
           }
         },
         {
@@ -99,7 +113,7 @@
     {
       "titulo": "Evaluación de procesos productivos y sistemas tecnológicos",
       "descripcion": "Auditoría de cómo se fabrican las cosas y su efecto dominó en las comunidades.",
-      "portada": "imagenes/procesos_productivos.jpg",
+      "portada": "default/imagen_tema_default6.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -107,6 +121,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default15.jpg"
           }
         },
         {
@@ -160,7 +181,7 @@
     {
       "titulo": "Microsoft Office Publisher",
       "descripcion": "Dominio de la herramienta de maquetación para la creación de diseños profesionales y publicidad.",
-      "portada": "imagenes/publisher_basico.jpg",
+      "portada": "default/imagen_tema_default15.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -168,6 +189,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default11.jpg"
           }
         },
         {

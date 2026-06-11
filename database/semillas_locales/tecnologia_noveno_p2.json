@@ -7,7 +7,7 @@
     {
       "titulo": "Uso responsable de dispositivos tecnológicos",
       "descripcion": "Aprender a usar la tecnología a nuestro favor sin que ella nos controle.",
-      "portada": "imagenes/uso_responsable.jpg",
+      "portada": "default/imagen_tema_default6.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default7.jpg"
           }
         },
         {
@@ -55,7 +62,7 @@
     {
       "titulo": "Herramientas digitales en la educación",
       "descripcion": "Cómo aprovechar el internet y el software para potenciar el aprendizaje.",
-      "portada": "imagenes/herramientas_educacion.jpg",
+      "portada": "default/imagen_tema_default16.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -63,6 +70,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default4.jpg"
           }
         },
         {
@@ -118,7 +132,7 @@
     {
       "titulo": "Seguridad en internet",
       "descripcion": "Protege tu información y privacidad en el vasto mundo del ciberespacio.",
-      "portada": "imagenes/seguridad_internet.jpg",
+      "portada": "default/imagen_tema_default4.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -126,6 +140,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default6.jpg"
           }
         },
         {
@@ -185,7 +206,7 @@
     {
       "titulo": "Redes sociales y su buen uso",
       "descripcion": "Construyendo relaciones positivas y seguras en plataformas digitales.",
-      "portada": "imagenes/redes_sociales.jpg",
+      "portada": "default/imagen_tema_default20.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -193,6 +214,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default7.jpg"
           }
         },
         {
@@ -238,7 +266,7 @@
     {
       "titulo": "Ventajas y desventajas de la tecnología",
       "descripcion": "Análisis crítico para entender que la tecnología es un arma de doble filo.",
-      "portada": "imagenes/ventajas_desventajas.jpg",
+      "portada": "default/imagen_tema_default2.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -246,6 +274,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default19.jpg"
           }
         },
         {
@@ -293,7 +328,7 @@
     {
       "titulo": "Ciudadanía digital",
       "descripcion": "Nuestros derechos y deberes como habitantes del mundo virtual.",
-      "portada": "imagenes/ciudadania_digital.jpg",
+      "portada": "default/imagen_tema_default18.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -301,6 +336,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default8.jpg"
           }
         },
         {

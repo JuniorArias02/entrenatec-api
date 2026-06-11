@@ -41,6 +41,8 @@ class DatabaseSeeder extends Seeder
             TecnologiaOnceP2Seeder::class,
             TecnologiaOnceP3Seeder::class,
             TecnologiaOnceP4Seeder::class,
+            CuadroTeoricoSeeder::class,
+            JuegosYEvaluacionesSeeder::class,
         ]);
     }
 }

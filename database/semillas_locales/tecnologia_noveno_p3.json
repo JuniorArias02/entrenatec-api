@@ -7,7 +7,7 @@
     {
       "titulo": "Cómo la tecnología ayuda a resolver problemas",
       "descripcion": "Identificar el rol fundamental de la tecnología como herramienta para facilitar la vida humana.",
-      "portada": "imagenes/tecnologia_problemas.jpg",
+      "portada": "default/imagen_tema_default9.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default7.jpg"
           }
         },
         {
@@ -61,7 +68,7 @@
     {
       "titulo": "Programación básica",
       "descripcion": "El lenguaje que nos permite dar instrucciones a las máquinas para automatizar tareas.",
-      "portada": "imagenes/programacion_basica.jpg",
+      "portada": "default/imagen_tema_default22.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -69,6 +76,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default2.jpg"
           }
         },
         {
@@ -136,7 +150,7 @@
     {
       "titulo": "Robótica y automatización",
       "descripcion": "La integración de la mecánica, electrónica y programación para crear máquinas autónomas.",
-      "portada": "imagenes/robotica.jpg",
+      "portada": "default/imagen_tema_default14.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -144,6 +158,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default12.jpg"
           }
         },
         {
@@ -182,7 +203,7 @@
     {
       "titulo": "Diseño de soluciones tecnológicas",
       "descripcion": "El paso a paso para pasar de una idea a un prototipo funcional.",
-      "portada": "imagenes/diseno_soluciones.jpg",
+      "portada": "default/imagen_tema_default15.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -190,6 +211,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default2.jpg"
           }
         },
         {
@@ -231,7 +259,7 @@
     {
       "titulo": "Innovación y creatividad",
       "descripcion": "Por qué pensar fuera de la caja es la habilidad más importante del futuro.",
-      "portada": "imagenes/innovacion.jpg",
+      "portada": "default/imagen_tema_default8.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -239,6 +267,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default3.jpg"
           }
         },
         {
@@ -278,7 +313,7 @@
     {
       "titulo": "Ejemplos de problemas cotidianos solucionados con tecnología",
       "descripcion": "Casos de éxito reales donde la tecnología ha hecho del mundo un lugar más fácil para vivir.",
-      "portada": "imagenes/problemas_solucionados.jpg",
+      "portada": "default/imagen_tema_default21.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -286,6 +321,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default9.jpg"
           }
         },
         {

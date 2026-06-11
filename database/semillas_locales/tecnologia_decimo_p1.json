@@ -7,7 +7,7 @@
     {
       "titulo": "Evolución de la tecnología",
       "descripcion": "Cómo ha evolucionado la tecnología a través del tiempo, su impacto en la sociedad y en diferentes épocas.",
-      "portada": "imagenes/evolucion_decimo.jpg",
+      "portada": "default/imagen_tema_default22.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default9.jpg"
           }
         },
         {
@@ -81,7 +88,7 @@
     {
       "titulo": "Herramientas ofimáticas — Microsoft Word",
       "descripcion": "Uso avanzado del procesador de texto para la creación de documentos profesionales.",
-      "portada": "imagenes/herramientas_ofimaticas.jpg",
+      "portada": "default/imagen_tema_default12.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -89,6 +96,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default22.jpg"
           }
         },
         {
@@ -141,7 +155,7 @@
     {
       "titulo": "Transferencia tecnológica",
       "descripcion": "El proceso mediante el cual las innovaciones fluyen desde los laboratorios hasta la sociedad.",
-      "portada": "imagenes/transferencia_tecnologica.jpg",
+      "portada": "default/imagen_tema_default9.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -149,6 +163,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default12.jpg"
           }
         },
         {
@@ -212,7 +233,7 @@
     {
       "titulo": "Relación entre tecnología, ciencia y matemáticas",
       "descripcion": "Cómo el trabajo interdisciplinario es el verdadero motor del progreso.",
-      "portada": "imagenes/ciencia_matematicas_tec.jpg",
+      "portada": "default/imagen_tema_default12.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -220,6 +241,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default13.jpg"
           }
         },
         {

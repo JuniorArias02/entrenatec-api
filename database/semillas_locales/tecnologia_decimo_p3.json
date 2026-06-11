@@ -7,7 +7,7 @@
     {
       "titulo": "Solución de problemas tecnológicos",
       "descripcion": "Desarrollo de habilidades para identificar y resolver problemas reales usando la tecnología bajo condiciones y restricciones específicas.",
-      "portada": "imagenes/solucion_problemas_decimo.jpg",
+      "portada": "default/imagen_tema_default24.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default3.jpg"
           }
         },
         {
@@ -56,7 +63,7 @@
     {
       "titulo": "Introducción al lenguaje HTML",
       "descripcion": "Conceptos, estructura e importancia del lenguaje base que da vida a toda la World Wide Web.",
-      "portada": "imagenes/html_introduccion.jpg",
+      "portada": "default/imagen_tema_default4.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -64,6 +71,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default19.jpg"
           }
         },
         {
@@ -139,7 +153,7 @@
     {
       "titulo": "Uso de la tecnología en la creación de páginas web",
       "descripcion": "Las herramientas modernas, el diseño web básico y su impacto educativo y comercial en la actualidad.",
-      "portada": "imagenes/creacion_web.jpg",
+      "portada": "default/imagen_tema_default24.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -147,6 +161,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default14.jpg"
           }
         },
         {
@@ -189,7 +210,7 @@
     {
       "titulo": "Reconocimiento y manejo del lenguaje HTML",
       "descripcion": "Aplicación práctica: inserción de multimedia, listas, tablas y organización avanzada de contenidos.",
-      "portada": "imagenes/manejo_html.jpg",
+      "portada": "default/imagen_tema_default9.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -197,6 +218,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default4.jpg"
           }
         },
         {
@@ -249,7 +277,7 @@
     {
       "titulo": "Fallas en sistemas tecnológicos",
       "descripcion": "Diagnóstico, formulación de hipótesis y mantenimiento preventivo ante errores técnicos y de software.",
-      "portada": "imagenes/fallas_tecnologicas.jpg",
+      "portada": "default/imagen_tema_default8.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -257,6 +285,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default18.jpg"
           }
         },
         {

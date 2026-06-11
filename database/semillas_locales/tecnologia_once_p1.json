@@ -7,7 +7,7 @@
     {
       "titulo": "Innovación y Transferencia Tecnológica",
       "descripcion": "Análisis profundo de cómo la investigación y la experimentación resuelven problemas reales.",
-      "portada": "imagenes/innovacion_once.jpg",
+      "portada": "default/imagen_tema_default19.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default21.jpg"
           }
         },
         {
@@ -42,7 +49,7 @@
     {
       "titulo": "Desarrollo Web Intermedio: Estructuras y Multimedia",
       "descripcion": "Dominio de etiquetas para organizar contenido avanzado y visualizar datos en la web.",
-      "portada": "imagenes/html_intermedio.jpg",
+      "portada": "default/imagen_tema_default11.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -50,6 +57,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default10.jpg"
           }
         },
         {
@@ -102,7 +116,7 @@
     {
       "titulo": "Navegación e Interactividad: Enlaces y Formularios",
       "descripcion": "Conectando la web y recolectando información de los usuarios.",
-      "portada": "imagenes/formularios_enlaces.jpg",
+      "portada": "default/imagen_tema_default19.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -110,6 +124,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default4.jpg"
           }
         },
         {
@@ -154,7 +175,7 @@
     {
       "titulo": "Evidencias y Proyecto Final",
       "descripcion": "Demostración de los aprendizajes adquiridos a lo largo del periodo.",
-      "portada": "imagenes/proyecto_once.jpg",
+      "portada": "default/imagen_tema_default9.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -162,6 +183,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default11.jpg"
           }
         },
         {

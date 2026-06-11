@@ -7,7 +7,7 @@
     {
       "titulo": "Impacto de la tecnología en la sociedad",
       "descripcion": "Análisis de cómo las invenciones moldean la cultura, la economía y las dinámicas sociales.",
-      "portada": "imagenes/impacto_sociedad.jpg",
+      "portada": "default/imagen_tema_default6.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -15,6 +15,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default7.jpg"
           }
         },
         {
@@ -57,7 +64,7 @@
     {
       "titulo": "Tecnología y medio ambiente",
       "descripcion": "La paradoja tecnológica: destruir el ecosistema y al mismo tiempo ser nuestra única salvación.",
-      "portada": "imagenes/tec_medio_ambiente.jpg",
+      "portada": "default/imagen_tema_default4.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -102,7 +109,8 @@
           "tipo": "IMAGEN",
           "contenido": "imagenes/infografia_energia_renovable.jpg",
           "metadata": {
-            "alt": "Infografía sobre fuentes de energía renovable"
+            "alt": "Infografía sobre fuentes de energía renovable",
+            "url": "/storage/default/imagen_tema_default15.jpg"
           }
         }
       ]
@@ -110,7 +118,7 @@
     {
       "titulo": "Cambios en la comunicación y el trabajo",
       "descripcion": "Del horario fijo a la oficina global: el teletrabajo y la economía digital.",
-      "portada": "imagenes/teletrabajo.jpg",
+      "portada": "default/imagen_tema_default11.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -118,6 +126,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default17.jpg"
           }
         },
         {
@@ -171,7 +186,7 @@
     {
       "titulo": "Inteligencia artificial y futuro",
       "descripcion": "El impacto de las máquinas que aprenden por sí mismas en nuestro día a día.",
-      "portada": "imagenes/inteligencia_artificial.jpg",
+      "portada": "default/imagen_tema_default9.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -179,6 +194,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default24.jpg"
           }
         },
         {
@@ -223,7 +245,7 @@
     {
       "titulo": "Dependencia tecnológica",
       "descripcion": "Cuando la herramienta se vuelve una extensión obligatoria de nuestro cuerpo.",
-      "portada": "imagenes/dependencia_tecnologica.jpg",
+      "portada": "default/imagen_tema_default12.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -231,6 +253,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default14.jpg"
           }
         },
         {
@@ -271,7 +300,7 @@
     {
       "titulo": "Ética y tecnología",
       "descripcion": "Los límites morales en la era digital: desde la privacidad hasta los derechos de las máquinas.",
-      "portada": "imagenes/etica_tecnologia.jpg",
+      "portada": "default/imagen_tema_default20.jpg",
       "bloques": [
         {
           "tipo": "TITULO",
@@ -279,6 +308,13 @@
           "metadata": {
             "nivel": "h2",
             "color": "#111827"
+          }
+        },
+        {
+          "tipo": "IMAGEN",
+          "contenido": "",
+          "metadata": {
+            "url": "/storage/default/imagen_tema_default1.jpg"
           }
         },
         {
