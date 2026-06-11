@@ -24,4 +24,6 @@ interface UsuarioRepositorio
     public function actualizarPassword(int $id, string $nuevaPassword): Usuario;
 
     public function actualizarRol(int $id, string $nuevoRol): Usuario;
+
+    public function actualizarPerfil(int $id, array $datos): Usuario;
 }

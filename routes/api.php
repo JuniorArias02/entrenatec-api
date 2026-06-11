@@ -48,6 +48,7 @@ Route::middleware('auth.escritura')->group(function () {
     Route::post('usuarios', [App\Presentacion\Controladores\AutenticacionControlador::class, 'registro']);
     Route::put('usuarios/{id}/password', [App\Presentacion\Controladores\UsuarioControlador::class, 'actualizarPassword']);
     Route::put('usuarios/{id}/rol', [App\Presentacion\Controladores\UsuarioControlador::class, 'actualizarRol']);
+    Route::put('usuarios/{id}/perfil', [App\Presentacion\Controladores\UsuarioControlador::class, 'actualizarPerfil']);
 
     // Rutas de Dashboard
     Route::get('dashboard/estadisticas', [App\Presentacion\Controladores\DashboardControlador::class, 'estadisticas']);

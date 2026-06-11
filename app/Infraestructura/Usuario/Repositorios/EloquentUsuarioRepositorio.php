@@ -48,4 +48,22 @@ class EloquentUsuarioRepositorio implements UsuarioRepositorio
         $usuario->update(['rol' => $nuevoRol]);
         return $usuario;
     }
+
+    public function actualizarPerfil(int $id, array $datos): Usuario
+    {
+        $usuario = Usuario::findOrFail($id);
+        
+        $updateData = [
+            'nombre' => $datos['nombre'],
+            'correo' => $datos['correo']
+        ];
+
+        if (!empty($datos['password'])) {
+            $updateData['password'] = $datos['password'];
+        }
+
+        $usuario->update($updateData);
+        
+        return $usuario;
+    }
 }

@@ -8,6 +8,8 @@ use App\Aplicacion\Usuario\Acciones\ActualizarPasswordAccion;
 use App\Aplicacion\Usuario\Acciones\ActualizarRolAccion;
 use App\Presentacion\Requests\ActualizarPasswordRequest;
 use App\Presentacion\Requests\ActualizarRolRequest;
+use App\Presentacion\Requests\ActualizarPerfilRequest;
+use App\Aplicacion\Usuario\Acciones\ActualizarPerfilAccion;
 use OpenApi\Attributes as OA;
 
 class UsuarioControlador extends Controller
@@ -140,6 +142,61 @@ class UsuarioControlador extends Controller
             'datos' => [
                 'id' => $usuario->id,
                 'rol' => $usuario->rol
+            ],
+            'error' => false
+        ], 200);
+    }
+
+    #[OA\Put(
+        path: '/api/usuarios/{id}/perfil',
+        summary: 'Actualizar perfil de un usuario',
+        security: [['bearerAuth' => []]],
+        tags: ['Usuarios']
+    )]
+    #[OA\Parameter(
+        name: 'id',
+        in: 'path',
+        required: true,
+        schema: new OA\Schema(type: 'integer')
+    )]
+    #[OA\RequestBody(
+        required: true,
+        content: new OA\MediaType(
+            mediaType: 'application/json',
+            schema: new OA\Schema(
+                required: ['nombre', 'correo'],
+                properties: [
+                    new OA\Property(property: 'nombre', type: 'string', example: 'Carlos Mendoza'),
+                    new OA\Property(property: 'correo', type: 'string', format: 'email', example: 'carlos@demo.com'),
+                    new OA\Property(property: 'password', type: 'string', example: 'nuevaClave123', description: 'Opcional. Si se envía, actualizará la contraseña.')
+                ]
+            )
+        )
+    )]
+    #[OA\Response(
+        response: 200,
+        description: 'Perfil actualizado con éxito',
+        content: new OA\JsonContent(
+            properties: [
+                new OA\Property(property: 'mensaje', type: 'string', example: 'Perfil actualizado con éxito.'),
+                new OA\Property(property: 'datos', type: 'object', properties: [
+                    new OA\Property(property: 'id', type: 'integer', example: 1),
+                    new OA\Property(property: 'nombre', type: 'string', example: 'Carlos Mendoza'),
+                    new OA\Property(property: 'correo', type: 'string', example: 'carlos@demo.com')
+                ]),
+                new OA\Property(property: 'error', type: 'boolean', example: false)
+            ]
+        )
+    )]
+    public function actualizarPerfil(int $id, ActualizarPerfilRequest $request, ActualizarPerfilAccion $accion)
+    {
+        $usuario = $accion->ejecutar($id, $request->validated());
+        return response()->json([
+            'mensaje' => 'Perfil actualizado con éxito.',
+            'datos' => [
+                'id' => $usuario->id,
+                'nombre' => $usuario->nombre,
+                'correo' => $usuario->correo
             ],
             'error' => false
         ], 200);
