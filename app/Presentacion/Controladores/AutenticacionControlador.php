@@ -9,6 +9,9 @@ use App\Presentacion\Requests\CrearUsuarioRequest;
 use App\Aplicacion\Usuario\Acciones\CrearUsuarioAccion;
 use App\Aplicacion\Usuario\Acciones\RefrescarTokenAccion;
 use App\Dominio\Usuario\DTOs\CrearUsuarioDTO;
+use Illuminate\Support\Facades\Mail;
+use App\Infraestructura\Usuario\Correos\BienvenidaCorreo;
+use App\Infraestructura\Usuario\Correos\InicioSesionCorreo;
 
 class AutenticacionControlador extends Controller
 {
@@ -79,6 +82,17 @@ class AutenticacionControlador extends Controller
 
         $usuario = auth('api')->user();
 
+        try {
+            Mail::to($usuario->correo)->send(new InicioSesionCorreo(
+                $usuario,
+                now()->format('Y-m-d H:i:s'),
+                $request->header('User-Agent') ?? 'Dispositivo desconocido',
+                $request->ip() ?? 'IP desconocida'
+            ));
+        } catch (\Exception $e) {
+            // Ignorar el error si el correo falla, para no bloquear el login
+        }
+
         return response()->json([
             'mensaje' => 'Sesión iniciada con éxito.',
             'datos' => [
@@ -139,6 +153,12 @@ class AutenticacionControlador extends Controller
 
         $dto = CrearUsuarioDTO::desdeArray($datosValidados);
         $usuario = $crearUsuarioAccion->ejecutar($dto);
+
+        try {
+            Mail::to($usuario->correo)->send(new BienvenidaCorreo($usuario));
+        } catch (\Exception $e) {
+            // Ignorar si el envío falla
+        }
 
         return response()->json([
             'mensaje' => 'Usuario registrado con éxito.',
