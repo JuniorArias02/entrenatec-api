@@ -25,6 +25,16 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        if (!Usuario::where('correo', 'nicolledayana901@gmail.com')->exists()) {
+            Usuario::create([
+                'nombre' => 'Nicolle Dayana',
+                'correo' => 'nicolledayana901@gmail.com',
+                'password' => 'nicol123',
+                'rol' => 'ADMIN',
+                'estado' => 'ACTIVO',
+            ]);
+        }
+
         $this->call([
             GradosSeeder::class,
             MateriasSeeder::class,
