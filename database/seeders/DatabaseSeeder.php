@@ -15,25 +15,35 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        if (!Usuario::where('correo', 'junior.arias02yt@gmail.com')->exists()) {
-            Usuario::create([
+        Usuario::updateOrCreate(
+            ['correo' => 'junior.arias02yt@gmail.com'],
+            [
                 'nombre' => 'Junior Arias',
-                'correo' => 'junior.arias02yt@gmail.com',
-                'password' => 'qweasdzxc', // Se hasheará automáticamente gracias al cast 'hashed' en el modelo Usuario
+                'password' => 'qweasdzxc',
                 'rol' => 'ADMIN',
                 'estado' => 'ACTIVO',
-            ]);
-        }
+            ]
+        );
 
-        if (!Usuario::where('correo', 'nicolledayana901@gmail.com')->exists()) {
-            Usuario::create([
+        Usuario::updateOrCreate(
+            ['correo' => 'nicolledayana901@gmail.com'],
+            [
                 'nombre' => 'Nicolle Dayana',
-                'correo' => 'nicolledayana901@gmail.com',
-                'password' => 'nicol123',
+                'password' => 'dayana221008',
                 'rol' => 'ADMIN',
                 'estado' => 'ACTIVO',
-            ]);
-        }
+            ]
+        );
+
+        Usuario::updateOrCreate(
+            ['correo' => 'mariaoliveros03@gmail.com'],
+            [
+                'nombre' => 'María Oliveros',
+                'password' => 'mariaoliveros03',
+                'rol' => 'ADMIN',
+                'estado' => 'ACTIVO',
+            ]
+        );
 
         $this->call([
             GradosSeeder::class,
